@@ -9,7 +9,7 @@ namespace HelloWorld
     // Comment here
     class Program
     {
-        // Void means it doesn't give anything back.
+        // Void means it doesn't give anything back. 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World");
