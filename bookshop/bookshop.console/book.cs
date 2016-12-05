@@ -33,7 +33,13 @@ namespace bookshop.console
         public int numberofpages
         {
             get { return _numberofpages; }
-            set { _numberofpages = value; }
+            set 
+            { 
+                if (value>0)
+                {
+                    _numberofpages = value;
+                }
+            }
         }
 
         private double _price;
@@ -43,5 +49,10 @@ namespace bookshop.console
             set { _price = value; }
         }
 
+        public book(string Title, string Author)
+        {
+            title = Title;
+            author = Author;
+        }
     }
 }

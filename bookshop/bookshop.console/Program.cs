@@ -10,6 +10,15 @@ namespace bookshop.console
     {
         static void Main(string[] args)
         {
+            book mybook = new book("Animal Farm", "George Orwell"); //second "book" is a constructor
+            mybook.price = 10.00;
+            mybook.isbn = "123ABC";
+            mybook.numberofpages = -200;
+
+            Console.WriteLine(mybook.title);
+            Console.WriteLine(mybook.author);
+            Console.WriteLine(mybook.numberofpages);
+            Console.ReadLine();
         }
     }
 }
