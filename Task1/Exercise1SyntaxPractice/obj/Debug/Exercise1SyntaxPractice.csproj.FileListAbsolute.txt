@@ -1,0 +1,5 @@
+C:\Users\Bishan.Meghani\Desktop\OOD\Task1\Exercise1SyntaxPractice\bin\Debug\Exercise1SyntaxPractice.exe.config
+C:\Users\Bishan.Meghani\Desktop\OOD\Task1\Exercise1SyntaxPractice\bin\Debug\Exercise1SyntaxPractice.exe
+C:\Users\Bishan.Meghani\Desktop\OOD\Task1\Exercise1SyntaxPractice\bin\Debug\Exercise1SyntaxPractice.pdb
+C:\Users\Bishan.Meghani\Desktop\OOD\Task1\Exercise1SyntaxPractice\obj\Debug\Exercise1SyntaxPractice.exe
+C:\Users\Bishan.Meghani\Desktop\OOD\Task1\Exercise1SyntaxPractice\obj\Debug\Exercise1SyntaxPractice.pdb
