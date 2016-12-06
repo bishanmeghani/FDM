@@ -1,0 +1,6 @@
+C:\Users\Bishan.Meghani\Desktop\OOD\Exercise1SyntaxPractise\Exercise1SyntaxPractise\bin\Debug\Exercise1SyntaxPractise.exe.config
+C:\Users\Bishan.Meghani\Desktop\OOD\Exercise1SyntaxPractise\Exercise1SyntaxPractise\bin\Debug\Exercise1SyntaxPractise.exe
+C:\Users\Bishan.Meghani\Desktop\OOD\Exercise1SyntaxPractise\Exercise1SyntaxPractise\bin\Debug\Exercise1SyntaxPractise.pdb
+C:\Users\Bishan.Meghani\Desktop\OOD\Exercise1SyntaxPractise\Exercise1SyntaxPractise\obj\Debug\Exercise1SyntaxPractise.csprojResolveAssemblyReference.cache
+C:\Users\Bishan.Meghani\Desktop\OOD\Exercise1SyntaxPractise\Exercise1SyntaxPractise\obj\Debug\Exercise1SyntaxPractise.exe
+C:\Users\Bishan.Meghani\Desktop\OOD\Exercise1SyntaxPractise\Exercise1SyntaxPractise\obj\Debug\Exercise1SyntaxPractise.pdb
