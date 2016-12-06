@@ -1,0 +1,6 @@
+C:\Users\Bishan.Meghani\Desktop\OOD\task3\task3\bin\Debug\task3.exe.config
+C:\Users\Bishan.Meghani\Desktop\OOD\task3\task3\obj\Debug\task3.csprojResolveAssemblyReference.cache
+C:\Users\Bishan.Meghani\Desktop\OOD\task3\task3\bin\Debug\task3.exe
+C:\Users\Bishan.Meghani\Desktop\OOD\task3\task3\bin\Debug\task3.pdb
+C:\Users\Bishan.Meghani\Desktop\OOD\task3\task3\obj\Debug\task3.exe
+C:\Users\Bishan.Meghani\Desktop\OOD\task3\task3\obj\Debug\task3.pdb
