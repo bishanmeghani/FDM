@@ -1,0 +1,6 @@
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\task4\task4\bin\Debug\task4.exe.config
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\task4\task4\obj\Debug\task4.csprojResolveAssemblyReference.cache
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\task4\task4\bin\Debug\task4.exe
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\task4\task4\bin\Debug\task4.pdb
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\task4\task4\obj\Debug\task4.exe
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\task4\task4\obj\Debug\task4.pdb
