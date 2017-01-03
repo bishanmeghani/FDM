@@ -38,29 +38,47 @@ namespace LambdasExample
 	        {
                 Console.WriteLine(evenNumber);
             }
+            Console.WriteLine("_");
 
             IEnumerable<int> distinct = numbers.Distinct<int>();
             foreach (var distinctnumber in distinct)
             {
                 Console.WriteLine(distinctnumber);
             }
+            Console.WriteLine("_");
 
             int firstFour = numbers.FirstOrDefault<int>(x => x == 4);
+            Console.WriteLine(firstFour);
+            Console.WriteLine("_");
 
             int lastFour = numbers.LastOrDefault<int>(x => x == 4);
+            Console.WriteLine(lastFour);
+            Console.WriteLine("_");
 
             int singleFour = numbers.SingleOrDefault<int>(x => x == 4);
+            Console.WriteLine(singleFour);
+            Console.WriteLine("_");
 
             IEnumerable<int> firstFive = numbers.Take<int>(5);
+            foreach (var number in firstFive)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine("_");
 
-            List<Book> book = new List<Book>()
+            List<Book> books = new List<Book>()
             {
                 new Book("title2", 40),
                 new Book("title1", 300),
                 new Book("title3", 10),
             };
 
-            IEnumerable<Book> orderedBooks = book.OrderBy(b => b.title);
+            IEnumerable<Book> orderedBooks = books.OrderBy(b => b.title);
+            foreach (var book in orderedBooks)
+            {
+                Console.WriteLine(book.title);
+            }
+            Console.WriteLine("_");
         }
     }
 }
