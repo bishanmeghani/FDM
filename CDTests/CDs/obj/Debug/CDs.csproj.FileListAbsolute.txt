@@ -1,0 +1,5 @@
+c:\Users\enxbm\documents\visual studio 2017\Projects\CDTests\CDs\bin\Debug\CDs.dll
+c:\Users\enxbm\documents\visual studio 2017\Projects\CDTests\CDs\bin\Debug\CDs.pdb
+c:\Users\enxbm\documents\visual studio 2017\Projects\CDTests\CDs\obj\Debug\CDs.csprojResolveAssemblyReference.cache
+c:\Users\enxbm\documents\visual studio 2017\Projects\CDTests\CDs\obj\Debug\CDs.dll
+c:\Users\enxbm\documents\visual studio 2017\Projects\CDTests\CDs\obj\Debug\CDs.pdb

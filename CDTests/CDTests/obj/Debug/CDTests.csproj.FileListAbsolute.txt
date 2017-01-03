@@ -1,0 +1,12 @@
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\obj\Debug\CDTests.csprojResolveAssemblyReference.cache
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\CDTests.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\CDTests.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\CDs.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\bin\Debug\CDs.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\obj\Debug\CDTests.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CDTests\CDTests\obj\Debug\CDTests.pdb
