@@ -1,0 +1,5 @@
+\\filbtn002\trainees\Bishan.Meghani\Visual Studio 2013\Projects\CurrencyConverter\XMLReader\bin\Debug\XMLReader.dll
+\\filbtn002\trainees\Bishan.Meghani\Visual Studio 2013\Projects\CurrencyConverter\XMLReader\bin\Debug\XMLReader.pdb
+\\filbtn002\trainees\Bishan.Meghani\Visual Studio 2013\Projects\CurrencyConverter\XMLReader\obj\Debug\CurrencyConverter.Library.csprojResolveAssemblyReference.cache
+\\filbtn002\trainees\Bishan.Meghani\Visual Studio 2013\Projects\CurrencyConverter\XMLReader\obj\Debug\XMLReader.dll
+\\filbtn002\trainees\Bishan.Meghani\Visual Studio 2013\Projects\CurrencyConverter\XMLReader\obj\Debug\XMLReader.pdb
