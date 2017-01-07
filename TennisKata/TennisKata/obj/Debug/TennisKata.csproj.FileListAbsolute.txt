@@ -1,0 +1,5 @@
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisKata\bin\Debug\TennisKata.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisKata\bin\Debug\TennisKata.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisKata\obj\Debug\TennisKata.csprojResolveAssemblyReference.cache
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisKata\obj\Debug\TennisKata.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisKata\obj\Debug\TennisKata.pdb
