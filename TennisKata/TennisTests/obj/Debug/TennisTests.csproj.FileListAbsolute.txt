@@ -1,0 +1,12 @@
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\obj\Debug\TennisTests.csprojResolveAssemblyReference.cache
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\TennisTests.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\TennisTests.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\TennisKata.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\bin\Debug\TennisKata.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\obj\Debug\TennisTests.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\TennisKata\TennisTests\obj\Debug\TennisTests.pdb
