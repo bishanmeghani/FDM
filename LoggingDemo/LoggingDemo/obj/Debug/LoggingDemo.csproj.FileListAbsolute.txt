@@ -1,0 +1,8 @@
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\LoggingDemo.exe.config
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\LoggingDemo.exe
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\LoggingDemo.pdb
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\log4net.dll
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\bin\Debug\log4net.xml
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\obj\Debug\LoggingDemo.csprojResolveAssemblyReference.cache
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\obj\Debug\LoggingDemo.exe
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\LoggingDemo\LoggingDemo\obj\Debug\LoggingDemo.pdb
