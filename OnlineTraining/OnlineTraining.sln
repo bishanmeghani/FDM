@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2AF26F
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTrainingTests", "OnlineTrainingTests\OnlineTrainingTests.csproj", "{8A752617-3F9E-4EC6-9153-5E48C9859FEA}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -30,6 +32,10 @@ Global
 		{D3D3040E-B872-4B60-834F-8ECEF3AF0C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3D3040E-B872-4B60-834F-8ECEF3AF0C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3D3040E-B872-4B60-834F-8ECEF3AF0C24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A752617-3F9E-4EC6-9153-5E48C9859FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A752617-3F9E-4EC6-9153-5E48C9859FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A752617-3F9E-4EC6-9153-5E48C9859FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A752617-3F9E-4EC6-9153-5E48C9859FEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
