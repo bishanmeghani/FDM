@@ -19,8 +19,11 @@ namespace ADODemoUI
 
             //List<Broker> allBrokers = _brokerRepo.GetAllBrokers();
 
-            IBrokerDisconnected _brokerRepo = new BrokerRepositoryDisconnected(connectionString);
-            List<Broker> allBrokers = _brokerRepo.GetAllBrokers();
+            //IBrokerDisconnected _brokerRepo = new MicrosoftSqlServerBrokerRepositoryDisconnected(connectionString);
+            IBrokerRepository _brokerRepoDisconnected = new MicrosoftSqlServerBrokerRepositoryDisconnected(connectionString);
+            _brokerRepoDisconnected.UpdateBroker(3, new Broker() { firstName = "Ben", lastName = "Bowes" });
+            List<Broker> allBrokers = _brokerRepoDisconnected.GetAllBrokers();
+
             foreach (Broker broker in allBrokers)
             {
                 Console.WriteLine(broker.firstName + " " + broker.lastName);
