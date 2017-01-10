@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCoverage", "CodeCoverage\CodeCoverage.csproj", "{2533AD98-2F94-4AEB-A3EF-EA259D012CBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{896ADD69-0DFA-4950-82CB-0EC6E1FEC042}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{AC47FCF4-952F-4AC5-BD27-6DCED1940557}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2533AD98-2F94-4AEB-A3EF-EA259D012CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2533AD98-2F94-4AEB-A3EF-EA259D012CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2533AD98-2F94-4AEB-A3EF-EA259D012CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2533AD98-2F94-4AEB-A3EF-EA259D012CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC47FCF4-952F-4AC5-BD27-6DCED1940557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC47FCF4-952F-4AC5-BD27-6DCED1940557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC47FCF4-952F-4AC5-BD27-6DCED1940557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC47FCF4-952F-4AC5-BD27-6DCED1940557}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
