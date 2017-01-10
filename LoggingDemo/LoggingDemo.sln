@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingDemo", "LoggingDemo\LoggingDemo.csproj", "{F55B1B4C-5E6B-4FDA-AFAA-FCD6E0E939B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCoverageDemo", "CodeCoverageDemo\CodeCoverageDemo.csproj", "{75C2C765-59FB-4DF4-86C8-B16B080C4D96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3DFD34A9-9EE3-40BF-ADCF-2AFD5C8862F7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{33199039-5BD7-4826-9EC0-583EDC53BBF3}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F55B1B4C-5E6B-4FDA-AFAA-FCD6E0E939B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F55B1B4C-5E6B-4FDA-AFAA-FCD6E0E939B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F55B1B4C-5E6B-4FDA-AFAA-FCD6E0E939B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F55B1B4C-5E6B-4FDA-AFAA-FCD6E0E939B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C2C765-59FB-4DF4-86C8-B16B080C4D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C2C765-59FB-4DF4-86C8-B16B080C4D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C2C765-59FB-4DF4-86C8-B16B080C4D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C2C765-59FB-4DF4-86C8-B16B080C4D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33199039-5BD7-4826-9EC0-583EDC53BBF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33199039-5BD7-4826-9EC0-583EDC53BBF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33199039-5BD7-4826-9EC0-583EDC53BBF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33199039-5BD7-4826-9EC0-583EDC53BBF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
