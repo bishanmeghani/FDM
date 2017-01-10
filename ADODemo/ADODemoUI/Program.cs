@@ -11,7 +11,7 @@ namespace ADODemoUI
     {
         static void Main(string[] args)
         {
-            string connectionString = "";
+            string connectionString = "Data Source=TRNLON11663;Initial Catalog=DemoDB;Integrated Security=True";
             IBrokerRepository _brokerRepo = new MicrosoftSqlServerBrokerRepository(connectionString);
             List<Broker> allBrokers = _brokerRepo.GetAllBrokers();
             foreach (Broker broker in allBrokers)
