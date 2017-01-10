@@ -1,0 +1,7 @@
+C:\Users\Bishan.MEghani\Desktop\CodeCoverage\Tests\bin\Debug\Tests.dll
+C:\Users\Bishan.MEghani\Desktop\CodeCoverage\Tests\bin\Debug\Tests.pdb
+C:\Users\Bishan.MEghani\Desktop\CodeCoverage\Tests\bin\Debug\CodeCoverage.dll
+C:\Users\Bishan.MEghani\Desktop\CodeCoverage\Tests\bin\Debug\CodeCoverage.pdb
+C:\Users\Bishan.MEghani\Desktop\CodeCoverage\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\Users\Bishan.MEghani\Desktop\CodeCoverage\Tests\obj\Debug\Tests.dll
+C:\Users\Bishan.MEghani\Desktop\CodeCoverage\Tests\obj\Debug\Tests.pdb
