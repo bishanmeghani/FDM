@@ -1,4 +1,0 @@
-C:\Users\Bishan.MEghani\Desktop\CodeCoverage\CodeCoverage\bin\Debug\CodeCoverage.dll
-C:\Users\Bishan.MEghani\Desktop\CodeCoverage\CodeCoverage\bin\Debug\CodeCoverage.pdb
-C:\Users\Bishan.MEghani\Desktop\CodeCoverage\CodeCoverage\obj\Debug\CodeCoverage.dll
-C:\Users\Bishan.MEghani\Desktop\CodeCoverage\CodeCoverage\obj\Debug\CodeCoverage.pdb
