@@ -12,6 +12,7 @@ namespace OnlineTraining.DataAccess
 {
     public class OnlineTrainingDataAccess
     {
-        private static readonly ILog logger = LogManager.GetLogger("");
+       
+    
     }
 }
