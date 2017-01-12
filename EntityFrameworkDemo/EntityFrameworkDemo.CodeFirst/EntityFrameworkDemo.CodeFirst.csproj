@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2F0202C-B181-4178-B7B2-816E9602161C}</ProjectGuid>
+    <ProjectGuid>{A7DDB428-6F9C-4168-90E4-4B6BF2256FC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EntityFrameworkDemo.Databasefirst</RootNamespace>
-    <AssemblyName>EntityFrameworkDemo.Databasefirst</AssemblyName>
+    <RootNamespace>EntityFrameworkDemo.CodeFirst</RootNamespace>
+    <AssemblyName>EntityFrameworkDemo.CodeFirst</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,55 +50,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="broker.cs">
-      <DependentUpon>DBFirstModel.tt</DependentUpon>
+    <Compile Include="Broker.cs" />
+    <Compile Include="BrokerRepo.cs" />
+    <Compile Include="CodeFirstModel.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Migrations\201701111016594_initial.cs" />
+    <Compile Include="Migrations\201701111016594_initial.Designer.cs">
+      <DependentUpon>201701111016594_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="company.cs">
-      <DependentUpon>DBFirstModel.tt</DependentUpon>
+    <Compile Include="Migrations\201701111027166_locations.cs" />
+    <Compile Include="Migrations\201701111027166_locations.Designer.cs">
+      <DependentUpon>201701111027166_locations.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBFirstModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBFirstModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBFirstModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBFirstModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBFirstModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
+    <Compile Include="Migrations\201701111029121_locations1.cs" />
+    <Compile Include="Migrations\201701111029121_locations1.Designer.cs">
+      <DependentUpon>201701111029121_locations1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="DBFirstModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBFirstModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="DBFirstModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
-      <LastGenOutput>DBFirstModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="DBFirstModel.edmx.diagram">
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
-    </None>
-    <None Include="DBFirstModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
-      <LastGenOutput>DBFirstModel.cs</LastGenOutput>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201701111016594_initial.resx">
+      <DependentUpon>201701111016594_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701111027166_locations.resx">
+      <DependentUpon>201701111027166_locations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701111029121_locations1.resx">
+      <DependentUpon>201701111029121_locations1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
