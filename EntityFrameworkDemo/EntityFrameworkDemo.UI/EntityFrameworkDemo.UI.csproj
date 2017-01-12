@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2F0202C-B181-4178-B7B2-816E9602161C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{2EBDBDEB-CE15-4CD5-A18D-37F032B90A94}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EntityFrameworkDemo.Databasefirst</RootNamespace>
-    <AssemblyName>EntityFrameworkDemo.Databasefirst</AssemblyName>
+    <RootNamespace>EntityFrameworkDemo.UI</RootNamespace>
+    <AssemblyName>EntityFrameworkDemo.UI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,8 +43,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,55 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="broker.cs">
-      <DependentUpon>DBFirstModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="company.cs">
-      <DependentUpon>DBFirstModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBFirstModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBFirstModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBFirstModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBFirstModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBFirstModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="DBFirstModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBFirstModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="DBFirstModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
-      <LastGenOutput>DBFirstModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="DBFirstModel.edmx.diagram">
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
-    </None>
-    <None Include="DBFirstModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBFirstModel.edmx</DependentUpon>
-      <LastGenOutput>DBFirstModel.cs</LastGenOutput>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <ProjectReference Include="..\EntityFrameworkDemo.CodeFirst\EntityFrameworkDemo.CodeFirst.csproj">
+      <Project>{a7ddb428-6f9c-4168-90e4-4b6bf2256fc1}</Project>
+      <Name>EntityFrameworkDemo.CodeFirst</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityFrameworkDemo.Databasefirst\EntityFrameworkDemo.Databasefirst.csproj">
+      <Project>{c2f0202c-b181-4178-b7b2-816e9602161c}</Project>
+      <Name>EntityFrameworkDemo.Databasefirst</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
