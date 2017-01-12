@@ -8,12 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-[assembly: log4net.Config.XmlConfigurator(Watch = true)]
-
 namespace OnlineTraining.Logic
 {
     public class OnlineTrainingLogic
     {
-        private static readonly ILog logger = LogManager.GetLogger("");
+        
     }
 }
