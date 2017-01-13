@@ -15,6 +15,7 @@ namespace OnlineTraining.EntityFramework.Migrations
                         courseName = c.String(),
                         courseRating = c.String(),
                         courseDurationHours = c.Int(nullable: false),
+                        coursePrice = c.Double(),
                     })
                 .PrimaryKey(t => t.courseId);
             

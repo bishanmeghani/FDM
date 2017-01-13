@@ -29,5 +29,150 @@ namespace OnlineTraining.EntityFramework
         {
             return _context.performances.ToList();
         }
+
+        public void AddCustomer(Customers customerToAdd)
+        {
+            _context.customers.Add(customerToAdd);
+            _context.SaveChanges();
+        }
+
+        public void AddCourse(Courses courseToAdd)
+        {
+            _context.courses.Add(courseToAdd);
+            _context.SaveChanges();
+        }
+
+        public void AddPerformance(Performances performanceToAdd)
+        {
+            _context.performances.Add(performanceToAdd);
+            _context.SaveChanges();
+        }
+
+        public void RemoveCustomerById(int customerToRemoveId)
+        {
+            var query = from c in _context.customers where c.customerId == customerToRemoveId select c;
+
+            foreach (var customer in query)
+            {
+                if (customer.customerId == customerToRemoveId)
+                {
+                    _context.customers.Remove(customer);
+                }
+            }
+
+            _context.SaveChanges();
+        }
+
+        public void RemoveCourseById(int courseToRemoveId)
+        {
+            var query = from c in _context.courses where c.courseId == courseToRemoveId select c;
+
+            foreach (var course in query)
+            {
+                if (course.courseId == courseToRemoveId)
+                {
+                    _context.courses.Remove(course);
+                }
+            }
+
+            _context.SaveChanges();
+        }
+
+        public void RemovePerformanceById(int performanceToRemoveId)
+        {
+            var query = from p in _context.performances where p.performanceId == performanceToRemoveId select p;
+
+            foreach (var performance in query)
+            {
+                if (performance.performanceId == performanceToRemoveId)
+                {
+                    _context.performances.Remove(performance);
+                }
+            }
+
+            _context.SaveChanges();
+        }
+
+        public void UpdateCustomerById(int customerToUpdateById, string thingToUpdate, string updatedThing)
+        {
+            var query = from uc in _context.customers where uc.customerId == customerToUpdateById select uc;
+            
+            foreach (var customer in query)
+	        {
+		        if (thingToUpdate == "customerFirstName")
+                {
+                    customer.customerFirstName = updatedThing;
+                }
+
+                if (thingToUpdate == "customerLastName")
+                {
+                    customer.customerLastName = updatedThing;
+                }
+
+                if (thingToUpdate == "customerAddress")
+                {
+                    customer.customerAddress = updatedThing;
+                }
+
+                if (thingToUpdate == "customerPhone")
+                {
+                    customer.customerPhone = updatedThing;
+                }
+
+                if (thingToUpdate == "customerEmail")
+                {
+                    customer.customerEmail = updatedThing;
+                }
+
+                if (thingToUpdate == "customerpassword")
+                {
+                    customer.customerpassword = updatedThing;
+                }
+	        }
+            _context.SaveChanges();
+        }
+
+        public void UpdateCourseById(int courseToUpdateById, string thingToUpdate, string updatedThing)
+        {
+            var query = from uc in _context.courses where uc.courseId == courseToUpdateById select uc;
+
+            foreach (var course in query)
+            {
+                if (thingToUpdate == "courseName")
+                {
+                    course.courseName = updatedThing;
+                }
+
+                if (thingToUpdate == "courseRating")
+                {
+                    course.courseRating = updatedThing;
+                }
+
+                if (thingToUpdate == "courseDurationHours")
+                {
+                    course.courseDurationHours = Int32.Parse(updatedThing);
+                }
+
+                if (thingToUpdate == "coursePrice")
+                {
+                    course.coursePrice = Double.Parse(updatedThing);
+                }
+            }
+            _context.SaveChanges();
+        }
+
+        public void UpdatePerformanceById(int performanceToUpdateById, string thingToUpdate, string updatedThing)
+        {
+            var query = from uc in _context.performances where uc.performanceId == performanceToUpdateById select uc;
+
+            foreach (var performance in query)
+            {
+                if (thingToUpdate == "performancePercentage")
+                {
+                    performance.performancePercentage = Double.Parse(updatedThing);
+                }
+            }
+            _context.SaveChanges();
+        }
     }
 }
