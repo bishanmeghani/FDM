@@ -63,6 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Courses.cs" />
+    <Compile Include="Migrations\201701131057590_addcoursePrice.cs" />
+    <Compile Include="Migrations\201701131057590_addcoursePrice.Designer.cs">
+      <DependentUpon>201701131057590_addcoursePrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reposit.cs" />
     <Compile Include="Customers.cs" />
     <Compile Include="Migrations\201701121039247_initial.cs" />
@@ -81,6 +85,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701121039247_initial.resx">
       <DependentUpon>201701121039247_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701131057590_addcoursePrice.resx">
+      <DependentUpon>201701131057590_addcoursePrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

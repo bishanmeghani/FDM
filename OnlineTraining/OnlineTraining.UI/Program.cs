@@ -30,11 +30,18 @@ namespace OnlineTraining.UI
         static void Main(string[] args)
         {
             OnlineTrainingModel context = new OnlineTrainingModel();
+            
             //ADDING A COURSE
             
-            //Courses newCourse = new Courses() { courseName = "C# Programming", courseRating = "3 Stars", courseDurationHours = 150};
-            //context.courses.Add(newCourse);
-            //context.SaveChanges();
+
+
+            //Courses newCourse = new Courses() { courseName = "C# Programming", courseRating = "3 Stars", courseDurationHours = 150, coursePrice = 400};
+            //Reposit repository1 = new Reposit(context);
+            //repository1.UpdateCourseById(16,"coursePrice","300");
+
+
+            //Reposit repository1 = new Reposit(context);
+            //repository1.RemoveCourseById(15);
 
             //foreach (Courses course in context.courses)
             //{
@@ -59,7 +66,12 @@ namespace OnlineTraining.UI
 
             //ADDING A CUSTOMER
 
-            //Customers newCustomer = new Customers() { customerFirstName = "Bishan", customerLastName = "Meghani", customerAddress = "46BrassieAvenue-W57DE", customerPhone = "07401700731", customerEmail = "bishan.meghani@yahoo.com", customerpassword = "sunshine" };
+            ////Customers newCustomer = new Customers() { customerFirstName = "Bishan", customerLastName = "Meghani", customerAddress = "46BrassieAvenue-W57DE", customerPhone = "07401700731", customerEmail = "bishan.meghani@yahoo.com", customerpassword = "sunshine" };
+            ////Reposit repository1 = new Reposit(context);
+            ////repository1.AddCustomer(newCustomer);
+
+            
+           
             //context.customers.Add(newCustomer);
             //context.SaveChanges();
 
@@ -73,11 +85,39 @@ namespace OnlineTraining.UI
 
             //context.SaveChanges();
 
-            Divide();
+            //Divide();
 
-            foreach (Customers cust in context.customers)
+            ////ADDING PRICES
+            //Courses coursePriceToUpdate = context.courses.Find(1);
+            //coursePriceToUpdate.coursePrice = 20.00;
+            //Courses coursePriceToUpdate2 = context.courses.Find(2);
+            //coursePriceToUpdate2.coursePrice = 30.00;
+            //Courses coursePriceToUpdate3 = context.courses.Find(3);
+            //coursePriceToUpdate3.coursePrice = 15.00;
+            //Courses coursePriceToUpdate4 = context.courses.Find(4);
+            //coursePriceToUpdate4.coursePrice = 17.00;
+            //Courses coursePriceToUpdate5 = context.courses.Find(5);
+            //coursePriceToUpdate5.coursePrice = 22.00;
+            //Courses coursePriceToUpdate6 = context.courses.Find(6);
+            //coursePriceToUpdate6.coursePrice = 25.00;
+            //Courses coursePriceToUpdate7 = context.courses.Find(7);
+            //coursePriceToUpdate7.coursePrice = 33.00;
+            //Courses coursePriceToUpdate8 = context.courses.Find(8);
+            //coursePriceToUpdate8.coursePrice = 36.00;
+            //Courses coursePriceToUpdate9 = context.courses.Find(9);
+            //coursePriceToUpdate9.coursePrice = 34.00;
+            //Courses coursePriceToUpdate10 = context.courses.Find(10);
+            //coursePriceToUpdate10.coursePrice = 32.00;
+            //Courses coursePriceToUpdate11 = context.courses.Find(11);
+            //coursePriceToUpdate11.coursePrice = 33.00;
+            //Courses coursePriceToUpdate12 = context.courses.Find(12);
+            //coursePriceToUpdate12.coursePrice = 40.00;
+            
+            //context.SaveChanges();
+            
+            foreach (Courses cs in context.courses)
             {
-                Console.WriteLine(cust.customerFirstName);
+                Console.WriteLine(cs.coursePrice);
             }
             Console.ReadLine();
         }
