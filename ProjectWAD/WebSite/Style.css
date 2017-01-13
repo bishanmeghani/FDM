@@ -1,0 +1,406 @@
+h1
+{
+	font-family: 'Coda', cursive;
+	font-size: 50px;
+	color: #1e2f2f; 
+	text-align: center
+}
+
+h2
+{
+	font-family: 'Coda', cursive;
+	font-size: 20px;
+	color: #004d99;
+	text-align: center
+}
+
+html, body
+{
+	font-weight: bold;
+	background-image: url("sand.jpg");
+	background-attachment: absolute;
+	font-family: 'Coda', cursive;
+	height: 100%;
+	width: 100%;
+	font-size: 1.03em;
+}
+
+#BO
+{
+	align: left;
+	font-size: 2.5em;
+}
+
+#search
+{
+	position:relative;
+	left: 1300px;
+	width: 100%;
+}
+
+#div1
+{
+	cursor: pointer;
+	background-color: #99cc00;
+	height: %;
+	width: 100%;
+	padding: 10px;
+	margin: %;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#div2
+{
+	cursor: pointer;
+	background-color: #0099ff;
+	height: %;
+	width: 100%;
+	padding:5px;
+	margin: %;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+
+#div3
+{
+	cursor: pointer;
+	background-color: #94b8b8;
+	height: %;
+	width: 100%;
+	padding:1px;
+	margin: %;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-decoration: none;
+}
+
+
+body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #94b8b8;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #94b8b8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+#div4 
+{
+	margin: 40px;
+	width:400px;
+    height:%;
+	position:relative;
+	text-decoration: none;
+}
+
+#div5 
+{
+	margin: 40px;
+    height:%;
+    width:400px;
+    position:relative;
+}
+
+#div6
+{
+	margin: 40px;
+    height:%;
+    width:400px;
+    position:relative;
+}
+
+#div7
+{
+	margin: 40px;
+    height:%;
+    width:400px;
+    position:relative;
+}
+
+#div8
+{
+	margin: 40px;
+    height:%;
+    width:400px; 
+    position:relative;
+}
+
+#div9
+{
+	margin: 40px;
+    height:%;
+    width:400px; 
+    position:relative;
+}
+
+#div10
+{
+	margin: 40px;
+	top: -330px;
+	left: 400px;
+    position:relative;
+}
+
+.div11
+
+{
+	transition: background-color 0.5s ease;
+	background-color: #0099ff;
+	top: 400px;
+	left: 900px;
+	height: 330px;
+	width: 390px;
+	border: white 5px solid;
+	padding:0x;
+	margin: 20px;
+	position: absolute;
+}
+
+.div11:hover
+{
+	background-color: #99cc00;
+	cursor: pointer
+}
+
+#div12
+{
+	top: -55px;
+	left: 290px;
+	height: 280px;
+	width: 350px;
+	padding:0px;
+	margin: 20px;
+	position: relative;
+}
+
+#div13
+{
+	top: 120px;
+	left: 100px;
+	height: 280px;
+	width: 350px;
+	padding:0px;
+	margin: 20px;
+	position: absolute;
+}
+
+#div14
+{
+	top: 170px;
+	left: 100px;
+	height: 120px;
+	width: 100px;
+	padding:0px;
+	margin: 20px;
+	position: absolute;
+}
+
+#div15
+{
+	margin: 40px;
+	top: -400px;
+	left: 400px;
+    position:relative;
+}
+
+#div16
+{
+	bottom: 0px;
+	left: 0px;
+	height: 10px;
+	width: 100%;
+	padding:0px;
+	margin: 20px;
+	position: absolute;
+}
+
+#div17
+{
+	top: 220px;
+	left: 100px;
+	height: 120px;
+	width: 100px;
+	padding:0px;
+	margin: 20px;
+	position: absolute;
+}
+
+#div18
+{
+	top: 272px;
+	left: 100px;
+	height: 120px;
+	width: 100px;
+	padding:0px;
+	margin: 20px;
+	position: absolute;
+}
+
+#divOD
+{
+    width: 100%;
+	text-align: center;
+
+}
+
+.button {
+    background-color: #99cc00;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+	background-color: #0099ff;
+	cursor: pointer
+}
+
+
+.button2 {
+    background-color: #99cc00;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2:hover {
+	background-color: #0099ff;
+	cursor: pointer
+}
+	
+	
+	
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+img
+{
+	height: 300px;
+	width: 400px
+}
+
+
+.PlacesPicturesClass
+{
+	width:30px;
+	height:30px
+}
+
+.PlacesPicturesClass2
+{
+	width:200px;
+	height:200px
+}
+
+nav 
+{
+	width: %;
+	margin: 10px; 
+}
+
+nav ul 
+{
+  list-style: none;
+  overflow: hidden; 
+}
+
+nav ul li 
+{
+	float: left;
+	width: 20%; 
+}
+
+nav ul li a 
+{
+	font-family: 'Coda', cursive;
+	text-align: center;
+}
+
+nav ul li a,
+nav ul li a:focus,
+nav ul li a:visited,
+nav ul li a:hover,
+
+nav ul li a:active 
+{
+ color: black;
+ text-decoration: none;
+}
+
+nav ul li a:hover, 
+
+
+nav ul li a:active 
+{
+  background: black;
+  background: -moz-linear-gradient(top, #e0ebeb 0%, #e0ebeb 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0ebeb), color-stop(100%,#e0ebeb)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, ##e0ebeb 0%,#96c40d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e0ebeb 0%,#e0ebeb 100%); /* Opera 11.10+ */
+  background: linear-gradient(to bottom, #e0ebeb 0%,#e0ebeb 100%); /* W3C, IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0ebeb', endColorstr='#e0ebeb',GradientType=0 ); /* IE6-9 */
+}
