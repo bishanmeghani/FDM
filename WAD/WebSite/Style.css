@@ -1,0 +1,57 @@
+h1
+{
+	color: Red; 
+	text-align: center;
+}
+
+h2
+{
+	color: Pink;
+}
+
+.myClass
+{
+	color: Blue;
+	font-size: 50px;
+}
+
+#div1:hover
+{
+	background-color: Red;
+	height: 100px;
+	width: 100px;
+	visibility: hidden;
+}
+
+a:hover
+{
+	color:Red;
+}
+
+a:visited
+{
+	color:Green;
+}
+
+#div2
+{
+	background-color: Blue;
+	height: 100px;
+	width: 100px;
+	border: black 5px solid;
+	padding:10px;
+	margin: 20px;
+}
+
+#div3
+{
+	background-color: Green;
+	height: 100px;
+	width: 100px;
+}
+
+p::first-letter
+{
+	color: red;
+	font-size: 100px
+}
