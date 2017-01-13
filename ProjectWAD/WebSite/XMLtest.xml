@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<holidays>
+	<destination id="1">
+		<place>Amsterdam</place>
+		<nights>2</nights>
+		<price>250</price>
+	</destination>
+
+	<destination id="2">
+		<place>Prague</place>
+		<nights>2</nights>
+		<price>280</price>
+	</destination>
+
+	<destination id="3">
+		<place>Las Vegas</place>
+		<nights>3</nights>
+		<price>950</price>
+	</destination>
+	
+	<destination id="4">
+		<place>Majorca</place>
+		<nights>5</nights>
+		<price>650</price>
+	</destination>
+	
+	<destination id="5">
+		<place>Cancun</place>
+		<nights>6</nights>
+		<price>1100</price>
+	</destination>
+	
+	<destination id="6">
+		<place>Myanmar</place>
+		<nights>7</nights>
+		<price>1350</price>
+	</destination>
+</holidays>
