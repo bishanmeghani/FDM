@@ -1,6 +1,0 @@
-c:\users\enxbm\documents\visual studio 2017\Projects\ShoppingCart.Logic\ShoppingCart.Logic\obj\Debug\ShoppingCart.Logic.csprojResolveAssemblyReference.cache
-c:\users\enxbm\documents\visual studio 2017\Projects\ShoppingCart.Logic\ShoppingCart.Logic\bin\Debug\ShoppingCart.Logic.exe.config
-c:\users\enxbm\documents\visual studio 2017\Projects\ShoppingCart.Logic\ShoppingCart.Logic\bin\Debug\ShoppingCart.Logic.exe
-c:\users\enxbm\documents\visual studio 2017\Projects\ShoppingCart.Logic\ShoppingCart.Logic\bin\Debug\ShoppingCart.Logic.pdb
-c:\users\enxbm\documents\visual studio 2017\Projects\ShoppingCart.Logic\ShoppingCart.Logic\obj\Debug\ShoppingCart.Logic.exe
-c:\users\enxbm\documents\visual studio 2017\Projects\ShoppingCart.Logic\ShoppingCart.Logic\obj\Debug\ShoppingCart.Logic.pdb
