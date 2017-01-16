@@ -1,0 +1,27 @@
+﻿@model IEnumerable<OnlineTraining.EntityFramework.Courses>
+@{
+    ViewBag.Title = "Courses";
+}
+
+<h2>Courses</h2>
+
+<table>
+    <tr>
+
+        <th>@Html.DisplayNameFor(model => model.courseName)</th>
+        <th>@Html.DisplayNameFor(model => model.courseRating)</th>
+        <th>@Html.DisplayNameFor(model => model.courseDurationHours)</th>
+        <th>@Html.DisplayNameFor(model => model.coursePrice)</th>
+    </tr>
+
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.courseName)</td>
+            <td>@Html.DisplayNameFor(model => model.courseRating)</td>
+            <td>@Html.DisplayNameFor(model => model.courseDurationHours)</td>
+            <td>@Html.DisplayNameFor(model => model.coursePrice)</td>
+        </tr>
+
+    }
+</table>
