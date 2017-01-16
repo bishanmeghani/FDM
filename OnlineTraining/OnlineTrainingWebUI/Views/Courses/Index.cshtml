@@ -17,11 +17,10 @@
     @foreach (var course in Model)
     {
         <tr>
-            <td>@Html.DisplayNameFor(model => model.courseName)</td>
-            <td>@Html.DisplayNameFor(model => model.courseRating)</td>
-            <td>@Html.DisplayNameFor(model => model.courseDurationHours)</td>
-            <td>@Html.DisplayNameFor(model => model.coursePrice)</td>
+            <td>@Html.DisplayFor(model => course.courseName)</td>
+            <td>@Html.DisplayFor(model => course.courseRating)</td>
+            <td>@Html.DisplayFor(model => course.courseDurationHours)</td>
+            <td>@Html.DisplayFor(model => course.coursePrice)</td>
         </tr>
-
     }
 </table>

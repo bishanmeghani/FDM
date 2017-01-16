@@ -15,5 +15,20 @@ namespace OnlineTraining.EntityFramework
         public string courseRating { get; set; }
         public int courseDurationHours { get; set; }
         public double coursePrice { get; set; }
+
+        public int GetCourseId()
+        {
+            return courseId;
+        }
+
+        public string GetCourseName()
+        {
+            return courseName;
+        }
+
+        public double GetCoursePrice()
+        {
+            return coursePrice;
+        }
     }
 }

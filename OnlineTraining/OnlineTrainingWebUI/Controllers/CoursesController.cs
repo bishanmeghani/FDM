@@ -13,7 +13,7 @@ namespace OnlineTrainingWebUI.Controllers
         // GET: Books
         public ActionResult Index()
         {
-            return View();
+            return View(db.courses.ToList());
         }
     }
 }
