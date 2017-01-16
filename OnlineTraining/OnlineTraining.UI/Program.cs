@@ -41,7 +41,7 @@ namespace OnlineTraining.UI
 
 
             //Reposit repository1 = new Reposit(context);
-            //repository1.RemoveCourseById(15);
+            //repository1.RemoveCourseById(16);
 
             //foreach (Courses course in context.courses)
             //{
@@ -115,11 +115,27 @@ namespace OnlineTraining.UI
             
             //context.SaveChanges();
             
-            foreach (Courses cs in context.courses)
-            {
-                Console.WriteLine(cs.coursePrice);
-            }
+            //foreach (Courses cs in context.courses)
+            //{
+            //    Console.WriteLine(cs.coursePrice);
+            //}
+            //Console.ReadLine();
+
+
+            Courses newItem = new Courses { courseId = 1, courseName = "GCSE Maths", courseRating = "4 Stars", courseDurationHours = 100, coursePrice = 20 };
+            Courses newItem2 = new Courses { courseId = 2, courseName = "GCSE English", courseRating = "3 Stars", courseDurationHours = 90, coursePrice = 30 };
+
+            IShoppingCart shoppingCart = new ShoppingCart();
+            shoppingCart.AddToCart(newItem);
+            shoppingCart.AddToCart(newItem2);
+            
+            Console.WriteLine(shoppingCart.GetNumberOfItems());
+            Console.WriteLine(shoppingCart.GetTotalPrice());
+
             Console.ReadLine();
+            //shoppingCart.EmptyTheCart();
+            //Console.WriteLine(shoppingCart.GetNumberOfItems());
+            //Console.ReadLine();
         }
     }
 }
