@@ -3,7 +3,7 @@
     ViewBag.Title = "Register";
 }
 
-<h2>Login to access your courses</h2>
+<h2>Create an account to gain access to your courses</h2>
 
 @using (Ajax.BeginForm(
     "Account", "Register", new AjaxOptions()
@@ -14,7 +14,7 @@
     }, new { @id = "registerForm" }))
 {
     <div class="form-horizontal">
-        <h4>Sign up</h4>
+
         <hr />
 
         <div class="form-group">
@@ -62,7 +62,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Sign in" class="btn btn-default" />
+                <input type="submit" value="Sign up" class="btn btn-default" />
             </div>
         </div>
     </div>
