@@ -58,7 +58,7 @@ namespace OnlineTraining.Logic
             numberOfItems = 0;
             foreach (CartItem item in myItems)
             {
-                numberOfItems = numberOfItems + item.getProductQuantity();
+                numberOfItems = numberOfItems + item.GetProductQuantity();
             }
             return numberOfItems;
         }
@@ -68,7 +68,7 @@ namespace OnlineTraining.Logic
             totalPrice = 0.0;
             foreach (CartItem item in myItems)
             {
-                totalPrice = totalPrice + item.getProductPrice() * item.getProductQuantity();
+                totalPrice = totalPrice + item.GetProductPrice() * item.GetProductQuantity();
             }
             return totalPrice;
         }

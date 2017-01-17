@@ -12,22 +12,22 @@ namespace OnlineTraining.Logic
         public double ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
 
-        public int getProductId()
+        public int GetProductId()
         {
             return ProductId;
         }
 
-        public string getProductName()
+        public string GetProductName()
         {
             return ProductName;
         }
 
-        public double getProductPrice()
+        public double GetProductPrice()
         {
             return ProductPrice;
         }
 
-        public int getProductQuantity()
+        public int GetProductQuantity()
         {
             return ProductQuantity;
         }
