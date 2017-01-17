@@ -20,14 +20,32 @@ namespace OnlineTrainingWebUI.Controllers
 
             if (Request.IsAjaxRequest())
             {
-                return PartialView("_Success");
+                return PartialView("_SuccessLogin");
             }
 
             return RedirectToAction("Index");
 
         }
-        
 
+        [HttpPost]
+        public ActionResult Register(Customers customerToRegister)
+        {
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_SuccessRegister");
+            }
+
+            return RedirectToAction("Index");
+
+        }
+
+
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
         
     }  
 }
