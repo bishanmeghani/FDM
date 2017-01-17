@@ -9,11 +9,8 @@ namespace OnlineTrainingWebUI.Controllers
 {
     public class AccountController : Controller
     {
-        public ActionResult Login()
-        {
-            return View();
-        }
-
+        
+ 
         [HttpPost]
         public ActionResult Login(Customers customerToLogin)
         {
@@ -40,6 +37,11 @@ namespace OnlineTrainingWebUI.Controllers
 
         }
 
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
 
         [HttpGet]
         public ActionResult Register()
