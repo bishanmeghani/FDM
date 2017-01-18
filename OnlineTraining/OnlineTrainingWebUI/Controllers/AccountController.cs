@@ -15,15 +15,11 @@ namespace OnlineTrainingWebUI.Controllers
         public ActionResult Login(Customers customerToLogin)
         {
             Reposit repository = new Reposit(modeldb);
-            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true) 
-            {
-                if (repository.CheckUserPassword(customerToLogin.customerpassword) == true)
+            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == true) 
+            {                
+                if (Request.IsAjaxRequest())
                 {
-                    if (Request.IsAjaxRequest())
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
-
+                    return RedirectToAction("Index", "Home");
                 }
             }
             return PartialView("_UnsuccessfulLogin");

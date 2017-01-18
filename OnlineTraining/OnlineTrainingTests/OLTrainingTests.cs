@@ -18,9 +18,9 @@ namespace OnlineTrainingTests
         {
             //Arrange
             Courses course1 = new Courses();
-            course1 = new Courses { courseId = 13, courseName = "C# Programming", courseRating = "4 Stars", courseDurationHours = 150 };
+            course1 = new Courses { courseId = 13, courseName = "C# Programming", courseRating = 4, courseDurationHours = 150 };
             Courses course2 = new Courses();
-            course2 = new Courses { courseId = 14, courseName = "Mandarin", courseRating = "2 Stars", courseDurationHours = 40 };
+            course2 = new Courses { courseId = 14, courseName = "Mandarin", courseRating = 2, courseDurationHours = 40 };
 
             List<Courses> expected = new List<Courses>();
             expected = new List<Courses> { course1, course2 };
@@ -33,8 +33,8 @@ namespace OnlineTrainingTests
 
             var testData = new List<Courses>()
             {
-                new Courses { courseId = 13, courseName = "C# Programming", courseRating = "4 Stars", courseDurationHours = 150 },
-                new Courses { courseId = 14, courseName = "Mandarin", courseRating = "2 Stars", courseDurationHours = 40 }
+                new Courses { courseId = 13, courseName = "C# Programming", courseRating = 4, courseDurationHours = 150 },
+                new Courses { courseId = 14, courseName = "Mandarin", courseRating = 2, courseDurationHours = 40 }
             }.AsQueryable();
 
             Mock<DbSet<Courses>> dbSetMock = new Mock<DbSet<Courses>>();
@@ -62,17 +62,17 @@ namespace OnlineTrainingTests
         {
             //Arrange
             Customers customer1 = new Customers();
-            customer1 = new Customers { customerId = 11, customerFirstName = "Mister", customerLastName = "Bean", customerAddress = "12ArbourRoad-N51RA", customerPhone = "", customerEmail = "mrbean@studios.com", customerpassword = "beano"};
+            customer1 = new Customers { customerId = 11, customerFirstName = "Mister", customerLastName = "Bean", customerAddress = "12ArbourRoad-N51RA", customerPhone = "", customerEmail = "mrbean@studios.com", customerPassword = "beano"};
             Customers customer2 = new Customers();
-            customer2 = new Customers { customerId = 12, customerFirstName = "Trigger", customerLastName = "Ball", customerAddress = "Flat3PeckhamRoad-SE153AA", customerPhone = "07401255663", customerEmail = "trigg@studios.com", customerpassword = "dave" };
+            customer2 = new Customers { customerId = 12, customerFirstName = "Trigger", customerLastName = "Ball", customerAddress = "Flat3PeckhamRoad-SE153AA", customerPhone = "07401255663", customerEmail = "trigg@studios.com", customerPassword = "dave" };
 
             List<Customers> expected = new List<Customers>();
             expected = new List<Customers> { customer1, customer2 };
 
             var testData = new List<Customers>()
             {
-                new Customers { customerId = 11, customerFirstName = "Mister", customerLastName = "Bean", customerAddress = "12ArbourRoad-N51RA", customerPhone = "", customerEmail = "mrbean@studios.com", customerpassword = "beano" },
-                new Customers { customerId = 12, customerFirstName = "Trigger", customerLastName = "Ball", customerAddress = "Flat3PeckhamRoad-SE153AA", customerPhone = "07401255663", customerEmail = "trigg@studios.com", customerpassword = "dave" }
+                new Customers { customerId = 11, customerFirstName = "Mister", customerLastName = "Bean", customerAddress = "12ArbourRoad-N51RA", customerPhone = "", customerEmail = "mrbean@studios.com", customerPassword = "beano" },
+                new Customers { customerId = 12, customerFirstName = "Trigger", customerLastName = "Ball", customerAddress = "Flat3PeckhamRoad-SE153AA", customerPhone = "07401255663", customerEmail = "trigg@studios.com", customerPassword = "dave" }
             }.AsQueryable();
 
             Mock<DbSet<Customers>> dbSetMock = new Mock<DbSet<Customers>>();

@@ -5,13 +5,21 @@
 
 <h2>Courses</h2>
 
-<table>
-    <tr>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 
-        <th>@Html.DisplayNameFor(model => model.courseName)</th>
-        <th>@Html.DisplayNameFor(model => model.courseRating)</th>
-        <th>@Html.DisplayNameFor(model => model.courseDurationHours)</th>
-        <th>@Html.DisplayNameFor(model => model.coursePrice)</th>
+
+<table class = "table">
+    <tr>
+        <th>@Html.ActionLink("Course", "Index", new { sortOrder = ViewBag.NameSortParm })</th>
+        <th>@Html.ActionLink("Course rating", "Index", new { sortOrder = ViewBag.RatingSortParm })</th>
+        <th>@Html.ActionLink("Course duration (hours)", "Index", new { sortOrder = ViewBag.DurationSortParm })</th>
+        <th>@Html.ActionLink("Course price (£)", "Index", new { sortOrder = ViewBag.PriceSortParm })</th>
     </tr>
 
     @foreach (var course in Model)
