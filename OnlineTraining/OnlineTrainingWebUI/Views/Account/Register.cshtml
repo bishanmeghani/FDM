@@ -6,7 +6,7 @@
 <h2>Create an account to gain access to your courses</h2>
 
 @using (Ajax.BeginForm(
-    "Account", "Register", new AjaxOptions()
+    "Register", "Account", new AjaxOptions()
     {
         HttpMethod = "POST",
         UpdateTargetId = "registerForm",

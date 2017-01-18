@@ -174,5 +174,32 @@ namespace OnlineTraining.EntityFramework
             }
             _context.SaveChanges();
         }
+
+        public bool CheckIfUserHasAnAccount(string checkedEmailAddress)
+        {
+            var query = from c in _context.customers where c.customerEmail == checkedEmailAddress select c;
+
+            foreach (var customer in query)
+            {
+                if (customer.customerEmail == checkedEmailAddress)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool CheckUserPassword(string checkedPassword)
+        {
+            var query = from c in _context.customers where c.customerpassword == checkedPassword select c;
+
+            foreach (var customer in query)
+            {
+                if (customer.customerpassword == checkedPassword)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
