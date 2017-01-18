@@ -126,7 +126,7 @@ namespace OnlineTraining.EntityFramework
 
                 if (thingToUpdate == "customerpassword")
                 {
-                    customer.customerpassword = updatedThing;
+                    customer.customerPassword = updatedThing;
                 }
 	        }
             _context.SaveChanges();
@@ -145,7 +145,7 @@ namespace OnlineTraining.EntityFramework
 
                 if (thingToUpdate == "courseRating")
                 {
-                    course.courseRating = updatedThing;
+                    course.courseRating = Int32.Parse(updatedThing);
                 }
 
                 if (thingToUpdate == "courseDurationHours")
@@ -188,13 +188,14 @@ namespace OnlineTraining.EntityFramework
             }
             return false;
         }
+        
         public bool CheckUserPassword(string checkedPassword)
         {
-            var query = from c in _context.customers where c.customerpassword == checkedPassword select c;
+            var query = from c in _context.customers where c.customerPassword == checkedPassword select c;
 
             foreach (var customer in query)
             {
-                if (customer.customerpassword == checkedPassword)
+                if (customer.customerPassword == checkedPassword)
                 {
                     return true;
                 }
