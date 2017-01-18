@@ -9,31 +9,47 @@ namespace OnlineTrainingWebUI.Controllers
 {
     public class AccountController : Controller
     {
-        
- 
+        OnlineTrainingModel modeldb = new OnlineTrainingModel();
+
         [HttpPost]
         public ActionResult Login(Customers customerToLogin)
         {
-
-            if (Request.IsAjaxRequest())
+            Reposit repository = new Reposit(modeldb);
+            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true) 
             {
-                return PartialView("_SuccessLogin");
+                if (repository.CheckUserPassword(customerToLogin.customerpassword) == true)
+                {
+                    if (Request.IsAjaxRequest())
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+
+                }
             }
-
-            return RedirectToAction("Index");
-
+            return PartialView("_UnsuccessfulLogin");
         }
+
+
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
 
         [HttpPost]
         public ActionResult Register(Customers customerToRegister)
         {
+            //{ customerFirstName = "Daniel", customerLastName = "Mason", customerAddress = "34JohnLane-B28FR", customerPhone = "07975324634", customerEmail = "dan.mason@tiscali.com", customerpassword = "moonpie" };
+            Reposit repository = new Reposit(modeldb);
+            repository.AddCustomer(customerToRegister);
 
             if (Request.IsAjaxRequest())
             {
-                return PartialView("_SuccessRegister");
+                return PartialView("_SuccessRegister", "Home");
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
 
         }
 
@@ -43,11 +59,7 @@ namespace OnlineTrainingWebUI.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Register()
-        {
-            return View();
-        }
+      
         
     }  
 }

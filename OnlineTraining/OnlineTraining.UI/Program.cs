@@ -67,11 +67,9 @@ namespace OnlineTraining.UI
             //ADDING A CUSTOMER
 
             ////Customers newCustomer = new Customers() { customerFirstName = "Bishan", customerLastName = "Meghani", customerAddress = "46BrassieAvenue-W57DE", customerPhone = "07401700731", customerEmail = "bishan.meghani@yahoo.com", customerpassword = "sunshine" };
-            ////Reposit repository1 = new Reposit(context);
+            Reposit repository1 = new Reposit(context);
             ////repository1.AddCustomer(newCustomer);
-
-            
-           
+                                  
             //context.customers.Add(newCustomer);
             //context.SaveChanges();
 
