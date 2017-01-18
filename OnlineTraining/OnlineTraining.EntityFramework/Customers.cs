@@ -13,6 +13,9 @@ namespace OnlineTraining.EntityFramework
         [Key]
         public int customerId { get; set; }
 
+        [DisplayName("Admin")]
+        public int customerAdmin { get; set; }
+
         [DisplayName("First name")]
         public string customerFirstName { get; set; }
 
@@ -29,7 +32,7 @@ namespace OnlineTraining.EntityFramework
         public string customerEmail { get; set; }
 
         [DisplayName("Password")]
-        public string customerpassword { get; set; }
+        public string customerPassword { get; set; }
 
         
     }
