@@ -33,7 +33,7 @@ namespace OnlineTraining.UI
             
             //ADDING A COURSE
             
-
+            
             //Courses newCourse = new Courses() { courseName = "GCSE Maths", courseRating = 5, courseDurationHours = 100, coursePrice = 24.0};
             //Courses newCourse2 = new Courses() { courseName = "GCSE English", courseRating = 4, courseDurationHours = 90, coursePrice = 22.0 };
             //Courses newCourse3 = new Courses() { courseName = "GCSE Science", courseRating = 4, courseDurationHours = 80, coursePrice = 25.0 };
@@ -49,6 +49,8 @@ namespace OnlineTraining.UI
             
             
             //Reposit repository1 = new Reposit(context);
+            //repository1.RemoveCustomerById(4);
+            //repository1.RemoveCustomerById(5);
             //repository1.AddCourse(newCourse);
             //repository1.AddCourse(newCourse2);
             //repository1.AddCourse(newCourse3);

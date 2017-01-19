@@ -9,12 +9,14 @@ namespace OnlineTraining.Logic
 {
     public interface ICustomerLogic
     {
-        
+        int CustomerLogin(Customers customerToLogin);
+        bool CustomerRegister(Customers customerToRegister);
     }
     
     public class CustomerLogic : ICustomerLogic
     {
         OnlineTrainingModel _context;
+        Reposit repository;
 
         public CustomerLogic(OnlineTrainingModel context)
         {
@@ -23,7 +25,7 @@ namespace OnlineTraining.Logic
 
         public int CustomerLogin(Customers customerToLogin)
         {
-            Reposit repository = new Reposit(_context);
+            repository = new Reposit(_context);
             //If Email and password match, you are logged in
             if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == true)
             {
@@ -40,6 +42,17 @@ namespace OnlineTraining.Logic
                 return 3;
             }
             return 0;
-        }        
+        }
+
+        public bool CustomerRegister(Customers customerToRegister)
+        {
+            repository = new Reposit(_context);
+            if (repository.CheckIfUserHasAnAccount(customerToRegister.customerEmail) == true)
+            {
+                return true;
+            }
+            repository.AddCustomer(customerToRegister);
+            return false;
+        }
     }
 }
