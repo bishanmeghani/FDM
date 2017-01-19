@@ -1,4 +1,5 @@
 ﻿using OnlineTraining.EntityFramework;
+using OnlineTraining.Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,27 +16,54 @@ namespace OnlineTrainingWebUI.Controllers
         public ActionResult Login(Customers customerToLogin)
         {
             //If Email and password match, you are logged in
-            Reposit repository = new Reposit(modeldb);
-            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == true) 
-            {                
+            CustomerLogic clogic = new CustomerLogic(modeldb);
+            
+            if (clogic.CustomerLogin(customerToLogin) == 1)
+            {
                 if (Request.IsAjaxRequest())
                 {
                     return RedirectToAction("Index", "Home");
                 }
             }
-            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == false)
+
+            if (clogic.CustomerLogin(customerToLogin) == 2)
             {
-                return PartialView("_UnsuccessfulLoginEmail");
-            }
-            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == false)
-            {
-                return PartialView("_UnsuccessfulLoginPassword");
+                if (Request.IsAjaxRequest())
+                {
+                    return PartialView("_UnsuccessfulLoginEmail");
+                }
             }
 
+            if (clogic.CustomerLogin(customerToLogin) == 2)
+            {
+                if (Request.IsAjaxRequest())
+                {
+                    return PartialView("_UnsuccessfulLoginPassword");
+                }
+            }
             return PartialView("_UnsuccessfulLogin");
         }
+            
+            
+            //Reposit repository = new Reposit(modeldb);
+            //if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == true) 
+            //{                
+            //    if (Request.IsAjaxRequest())
+            //    {
+            //        return RedirectToAction("Index", "Home");
+            //    }
+            //}
+            //if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == false)
+            //{
+            //    return PartialView("_UnsuccessfulLoginEmail");
+            //}
+            //if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == false)
+            //{
+            //    return PartialView("_UnsuccessfulLoginPassword");
+            //}
 
-
+            //return PartialView("_UnsuccessfulLogin");
+        
         [HttpGet]
         public ActionResult Register()
         {

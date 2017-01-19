@@ -244,6 +244,10 @@
       <Project>{78e8e3c4-02eb-489b-abb7-3799d8b85f8e}</Project>
       <Name>OnlineTraining.EntityFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineTraining.Logic\OnlineTraining.Logic.csproj">
+      <Project>{cda97c6f-9500-4bc5-aa33-887fdacc2d60}</Project>
+      <Name>OnlineTraining.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
