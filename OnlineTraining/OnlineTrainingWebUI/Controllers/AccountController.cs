@@ -11,12 +11,13 @@ namespace OnlineTrainingWebUI.Controllers
     public class AccountController : Controller
     {
         OnlineTrainingModel modeldb = new OnlineTrainingModel();
+        CustomerLogic clogic;
 
         [HttpPost]
         public ActionResult Login(Customers customerToLogin)
         {
             //If Email and password match, you are logged in
-            CustomerLogic clogic = new CustomerLogic(modeldb);
+            clogic = new CustomerLogic(modeldb);
             
             if (clogic.CustomerLogin(customerToLogin) == 1)
             {
@@ -34,7 +35,7 @@ namespace OnlineTrainingWebUI.Controllers
                 }
             }
 
-            if (clogic.CustomerLogin(customerToLogin) == 2)
+            if (clogic.CustomerLogin(customerToLogin) == 3)
             {
                 if (Request.IsAjaxRequest())
                 {
@@ -44,25 +45,6 @@ namespace OnlineTrainingWebUI.Controllers
             return PartialView("_UnsuccessfulLogin");
         }
             
-            
-            //Reposit repository = new Reposit(modeldb);
-            //if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == true) 
-            //{                
-            //    if (Request.IsAjaxRequest())
-            //    {
-            //        return RedirectToAction("Index", "Home");
-            //    }
-            //}
-            //if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == false)
-            //{
-            //    return PartialView("_UnsuccessfulLoginEmail");
-            //}
-            //if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == false)
-            //{
-            //    return PartialView("_UnsuccessfulLoginPassword");
-            //}
-
-            //return PartialView("_UnsuccessfulLogin");
         
         [HttpGet]
         public ActionResult Register()
@@ -75,16 +57,15 @@ namespace OnlineTrainingWebUI.Controllers
         public ActionResult Register(Customers customerToRegister)
         {
             //{ customerFirstName = "Daniel", customerLastName = "Mason", customerAddress = "34JohnLane-B28FR", customerPhone = "07975324634", customerEmail = "dan.mason@tiscali.com", customerpassword = "moonpie" };
-            Reposit repository = new Reposit(modeldb);
-            repository.AddCustomer(customerToRegister);
-
-            if (Request.IsAjaxRequest())
+            clogic = new CustomerLogic(modeldb);
+            if(clogic.CustomerRegister(customerToRegister) == true)
             {
-                return PartialView("_SuccessRegister", "Home");
+                if (Request.IsAjaxRequest())
+                {
+                    return PartialView("_UnsuccessfulRegister", "Home");
+                }
             }
-
-            return RedirectToAction("Index", "Home");
-
+            return PartialView("_SuccessRegister", "Home");
         }
 
         [HttpGet]
