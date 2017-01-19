@@ -14,6 +14,7 @@ namespace OnlineTrainingWebUI.Controllers
         [HttpPost]
         public ActionResult Login(Customers customerToLogin)
         {
+            //If Email and password match, you are logged in
             Reposit repository = new Reposit(modeldb);
             if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == true) 
             {                
@@ -22,6 +23,15 @@ namespace OnlineTrainingWebUI.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
+            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == false)
+            {
+                return PartialView("_UnsuccessfulLoginEmail");
+            }
+            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == false)
+            {
+                return PartialView("_UnsuccessfulLoginPassword");
+            }
+
             return PartialView("_UnsuccessfulLogin");
         }
 

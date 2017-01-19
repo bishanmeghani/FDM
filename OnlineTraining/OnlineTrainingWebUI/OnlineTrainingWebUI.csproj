@@ -225,6 +225,8 @@
     <Content Include="Views\Shared\_SuccessRegister.cshtml" />
     <Content Include="Views\Shared\_UnsuccessfulLogin.cshtml" />
     <Content Include="Views\Courses\Overview.cshtml" />
+    <Content Include="Views\Shared\_UnsuccessfulLoginEmail.cshtml" />
+    <Content Include="Views\Shared\_UnsuccessfulLoginPassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
