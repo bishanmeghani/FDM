@@ -20,13 +20,13 @@ namespace OnlineTraining.Logic
     }
     
     
-    public class ShoppingCart : IShoppingCart
+    public class ShoppingCartLogic : IShoppingCart
     {
         List<CartItem> myItems;
         int numberOfItems;
         double totalPrice;
         
-        public ShoppingCart()
+        public ShoppingCartLogic()
         {
             myItems = new List<CartItem>();
             numberOfItems = 0;

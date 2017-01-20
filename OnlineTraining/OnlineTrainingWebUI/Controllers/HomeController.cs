@@ -8,13 +8,14 @@ namespace OnlineTrainingWebUI.Controllers
 {
     public class HomeController : Controller
     {
-        [HttpGet]
+        [HttpGet]        
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

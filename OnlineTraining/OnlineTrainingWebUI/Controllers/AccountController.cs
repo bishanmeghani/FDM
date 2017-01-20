@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace OnlineTrainingWebUI.Controllers
 {
@@ -14,42 +15,69 @@ namespace OnlineTrainingWebUI.Controllers
         CustomerLogic clogic;
 
         [HttpPost]
-        public ActionResult Login(Customers customerToLogin)
+        public ActionResult Login(Customers customerToLogin, string returnUrl)
         {
-            //If Email and password match, you are logged in
-            clogic = new CustomerLogic(modeldb);
-            
-            if (clogic.CustomerLogin(customerToLogin) == 1)
+            // Lets first check if the Model is valid or not
+            if (ModelState.IsValid)
             {
-                if (Request.IsAjaxRequest())
+                clogic = new CustomerLogic(modeldb);
+                string customerEmail = customerToLogin.customerEmail;
+                string customerPassword = customerToLogin.customerPassword;
+
+                // Now if our password was enctypted or hashed we would have done the
+                // same operation on the user entered password here, But for now
+                // since the password is in plain text lets just authenticate directly
+
+                if (clogic.CustomerLogin(customerToLogin) == 1)
                 {
-                    return RedirectToAction("Index", "Home");
+                    FormsAuthentication.SetAuthCookie(customerEmail, false);
+                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else if (clogic.CustomerLogin(customerToLogin) == 2)
+                {
+                    if (Request.IsAjaxRequest())
+                    {
+                        return PartialView("_UnsuccessfulLoginEmail");
+                    }
+                }
+                else if (clogic.CustomerLogin(customerToLogin) == 3)
+                {
+                    if (Request.IsAjaxRequest())
+                    {
+                        return PartialView("_UnsuccessfulLoginPassword");
+                    }
+
                 }
             }
 
-            if (clogic.CustomerLogin(customerToLogin) == 2)
-            {
-                if (Request.IsAjaxRequest())
-                {
-                    return PartialView("_UnsuccessfulLoginEmail");
-                }
-            }
-
-            if (clogic.CustomerLogin(customerToLogin) == 3)
-            {
-                if (Request.IsAjaxRequest())
-                {
-                    return PartialView("_UnsuccessfulLoginPassword");
-                }
-            }
-            return PartialView("_UnsuccessfulLogin");
+            // If we got this far, something failed, redisplay form
+            return View(customerToLogin);
         }
             
         
-        [HttpGet]
-        public ActionResult Register()
+        [HttpPost]
+        public ActionResult LogOff()
         {
-            return View();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult DeleteMyAccount()
+        {
+            clogic = new CustomerLogic(modeldb);
+
+            Customers customerToDelete = modeldb.customers.Where(c => c.customerEmail == User.Identity.Name).ToList()[0];
+
+            clogic.RemoveAccount(customerToDelete);
+            return RedirectToAction("Index", "Home");
         }
 
 
@@ -74,7 +102,17 @@ namespace OnlineTrainingWebUI.Controllers
             return View();
         }
 
-      
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Cart()
+        {
+            return View();
+        }
         
     }  
 }
