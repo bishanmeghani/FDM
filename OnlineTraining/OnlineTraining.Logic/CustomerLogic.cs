@@ -54,5 +54,11 @@ namespace OnlineTraining.Logic
             repository.AddCustomer(customerToRegister);
             return false;
         }
+
+        public void RemoveAccount(Customers customerToRemove)
+        {
+            repository = new Reposit(_context);
+            repository.RemoveCustomerById(customerToRemove.customerId);
+        }
     }
 }

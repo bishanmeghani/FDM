@@ -1,4 +1,5 @@
 ﻿using OnlineTraining.EntityFramework;
+using OnlineTraining.Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace OnlineTrainingWebUI.Controllers
 {
     public class CoursesController : Controller
     {
-        OnlineTrainingModel db = new OnlineTrainingModel();
+        OnlineTrainingModel modeldb = new OnlineTrainingModel();
+        ShoppingCartLogic cartlogic;
 
         public ActionResult Index(string sortOrder, string searchString)
         {
@@ -17,7 +19,7 @@ namespace OnlineTrainingWebUI.Controllers
             ViewBag.RatingSortParm = sortOrder == "Rating" ? "rating_desc" : "Rating";
             ViewBag.DurationSortParm = sortOrder == "Duration" ? "duration_desc" : "Duration";
             ViewBag.PriceSortParm = sortOrder == "Course Price" ? "price_desc" : "Course Price";
-            var cs = from c in db.courses select c;
+            var cs = from c in modeldb.courses select c;
             
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -57,6 +59,17 @@ namespace OnlineTrainingWebUI.Controllers
         public ActionResult Overview()
         {
             return View();
-        }  
+        }
+
+        public ActionResult AddCourseToCart(CartItem courseToPutInCart)
+        {
+            cartlogic = new ShoppingCartLogic();
+
+            //Customers customerToDelete = modeldb.customers.Where(c => c.customerEmail == User.Identity.Name).ToList()[0];
+
+            cartlogic.AddToCart(courseToPutInCart);
+            return RedirectToAction("Cart", "Account");
+        }
+
     }
 }

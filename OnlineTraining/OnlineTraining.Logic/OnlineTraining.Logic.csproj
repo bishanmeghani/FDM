@@ -61,8 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CartItem.cs" />
+    <Compile Include="CourseLogic.cs" />
     <Compile Include="CustomerLogic.cs" />
-    <Compile Include="ShoppingCart.cs" />
+    <Compile Include="ShoppingCartLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
