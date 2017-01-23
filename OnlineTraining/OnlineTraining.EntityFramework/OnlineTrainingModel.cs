@@ -21,5 +21,6 @@ namespace OnlineTraining.EntityFramework
         public virtual DbSet<Courses> courses { get; set; }
         public virtual DbSet<Customers> customers { get; set; }
         public virtual DbSet<Performances> performances { get; set; }
+        public virtual DbSet<Cart> cart { get; set; }
     }
 }

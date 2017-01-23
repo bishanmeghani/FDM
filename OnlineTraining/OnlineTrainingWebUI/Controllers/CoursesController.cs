@@ -61,12 +61,11 @@ namespace OnlineTrainingWebUI.Controllers
             return View();
         }
 
-        public ActionResult AddCourseToCart(CartItem courseToPutInCart)
+        public ActionResult AddCourseToCart(string id)
         {
             cartlogic = new ShoppingCartLogic();
-
-            //Customers customerToDelete = modeldb.customers.Where(c => c.customerEmail == User.Identity.Name).ToList()[0];
-
+            int myId = Convert.ToInt32(id);
+            Courses courseToPutInCart = cartlogic.GetCourse(myId);
             cartlogic.AddToCart(courseToPutInCart);
             return RedirectToAction("Cart", "Account");
         }

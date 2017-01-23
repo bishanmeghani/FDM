@@ -13,6 +13,7 @@ namespace OnlineTrainingWebUI.Controllers
     {
         OnlineTrainingModel modeldb = new OnlineTrainingModel();
         CustomerLogic clogic;
+        ShoppingCartLogic cartlogic;
 
         [HttpPost]
         public ActionResult Login(Customers customerToLogin, string returnUrl)
@@ -111,7 +112,11 @@ namespace OnlineTrainingWebUI.Controllers
         [HttpGet]
         public ActionResult Cart()
         {
-            return View();
+            cartlogic = new ShoppingCartLogic();
+            //cartlogic.AddToCart(new CartItem { ProductName = "maths" });
+
+            
+            return View(cartlogic.GetAllItems());
         }
         
     }  
