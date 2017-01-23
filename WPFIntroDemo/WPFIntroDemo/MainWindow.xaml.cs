@@ -24,5 +24,10 @@ namespace WPFIntroDemo
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            myTextBlock.Text = "Goodbye world";
+        }
     }
 }

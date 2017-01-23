@@ -1,8 +1,16 @@
 ﻿<Window x:Class="WPFIntroDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="Greetings" Height="350" Width="525">
+    <StackPanel>
+        <TextBlock Name="myTextBlock" Text="Hello World"/>
+        <Button Content="Click me" Click="Button_Click" Foreground="Red" Background="Green">
+            <!--<Button.Foreground>
+                <SolidColorBrush Color="Red"/>
+            </Button.Foreground>
+            <Button.Background>
+                <SolidColorBrush Color="Firebrick"/>
+            </Button.Background>-->
+        </Button>
+    </StackPanel>
 </Window>
