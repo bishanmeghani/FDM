@@ -1,1 +1,20 @@
-﻿
+﻿@model IEnumerable<OnlineTraining.EntityFramework.Courses>
+@{
+    ViewBag.Title = "My Shopping Cart";
+}
+
+<h2>My Shopping Cart</h2>
+
+<table class="table">
+
+    <tr>
+        <th>@Html.ActionLink("Courses in Shopping Cart", "Index")</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.courseName)</td>
+        </tr>
+    }
+</table>

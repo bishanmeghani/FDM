@@ -24,20 +24,5 @@ namespace OnlineTraining.EntityFramework
 
         [DisplayName("Course Price (£)")]
         public double coursePrice { get; set; }
-
-        public int GetCourseId()
-        {
-            return courseId;
-        }
-
-        public string GetCourseName()
-        {
-            return courseName;
-        }
-
-        public double GetCoursePrice()
-        {
-            return coursePrice;
-        }
     }
 }

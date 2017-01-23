@@ -20,42 +20,42 @@
         <div class="form-group">
             @Html.LabelFor(model => model.customerFirstName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.customerFirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.customerFirstName, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.customerLastName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.customerLastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.customerLastName, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.customerAddress, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.customerAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.customerAddress, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.customerPhone, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.customerPhone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.customerPhone, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.customerEmail, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.customerEmail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.customerEmail, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.customerPassword, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.customerPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.PasswordFor(model => model.customerPassword, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 

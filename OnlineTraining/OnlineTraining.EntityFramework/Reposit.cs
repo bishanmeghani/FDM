@@ -78,6 +78,13 @@ namespace OnlineTraining.EntityFramework
             _context.SaveChanges();
         }
 
+        public Courses GetCourseById(int courseToGetId)
+        {
+            var query = from c in _context.courses where c.courseId == courseToGetId select c;
+
+            return query.FirstOrDefault();
+        }
+
         public void RemovePerformanceById(int performanceToRemoveId)
         {
             var query = from p in _context.performances where p.performanceId == performanceToRemoveId select p;
