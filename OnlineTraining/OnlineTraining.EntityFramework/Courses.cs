@@ -11,10 +11,10 @@ namespace OnlineTraining.EntityFramework
     public class Courses
     {
         [Key]
-        public int courseId { get; set; }
+        public virtual int courseId { get; set; }
 
         [DisplayName("Course")]
-        public string courseName { get; set; }
+        public virtual string courseName { get; set; }
 
         [DisplayName("Rating")]
         public int courseRating { get; set; }

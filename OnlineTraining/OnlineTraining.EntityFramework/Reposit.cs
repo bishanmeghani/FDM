@@ -78,13 +78,6 @@ namespace OnlineTraining.EntityFramework
             _context.SaveChanges();
         }
 
-        public Courses GetCourseById(int courseToGetId)
-        {
-            var query = from c in _context.courses where c.courseId == courseToGetId select c;
-
-            return query.FirstOrDefault();
-        }
-
         public void RemovePerformanceById(int performanceToRemoveId)
         {
             var query = from p in _context.performances where p.performanceId == performanceToRemoveId select p;
@@ -100,12 +93,24 @@ namespace OnlineTraining.EntityFramework
             _context.SaveChanges();
         }
 
+        public virtual Courses GetCourseById(int courseToGetId)
+        {
+            var query = from c in _context.courses where c.courseId == courseToGetId select c;
+
+            return query.FirstOrDefault();
+        }
+
         public void UpdateCustomerById(int customerToUpdateById, string thingToUpdate, string updatedThing)
         {
             var query = from uc in _context.customers where uc.customerId == customerToUpdateById select uc;
             
             foreach (var customer in query)
 	        {
+                if (thingToUpdate == "customerAdmin")
+                {
+                    customer.customerAdmin = Int32.Parse(updatedThing);
+                }
+
 		        if (thingToUpdate == "customerFirstName")
                 {
                     customer.customerFirstName = updatedThing;
@@ -131,7 +136,7 @@ namespace OnlineTraining.EntityFramework
                     customer.customerEmail = updatedThing;
                 }
 
-                if (thingToUpdate == "customerpassword")
+                if (thingToUpdate == "customerPassword")
                 {
                     customer.customerPassword = updatedThing;
                 }

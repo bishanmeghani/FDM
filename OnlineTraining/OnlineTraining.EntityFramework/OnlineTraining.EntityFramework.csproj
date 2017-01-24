@@ -76,6 +76,10 @@
     <Compile Include="Migrations\201701181355546_third.Designer.cs">
       <DependentUpon>201701181355546_third.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701231607018_fourth.cs" />
+    <Compile Include="Migrations\201701231607018_fourth.Designer.cs">
+      <DependentUpon>201701231607018_fourth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Reposit.cs" />
     <Compile Include="Customers.cs" />
@@ -103,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701181355546_third.resx">
       <DependentUpon>201701181355546_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701231607018_fourth.resx">
+      <DependentUpon>201701231607018_fourth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
