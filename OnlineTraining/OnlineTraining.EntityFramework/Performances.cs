@@ -10,7 +10,7 @@ namespace OnlineTraining.EntityFramework
     public class Performances
     {
         [Key]
-        public int performanceId { get; set; }
+        public virtual int performanceId { get; set; }
         public double performancePercentage { get; set; }
     }
 }

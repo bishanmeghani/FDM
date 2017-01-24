@@ -8,9 +8,8 @@
 <div class="jumbotron">
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/GCSEMathsPic.png" alt="GCSEMaths" style="width:304px;height:228px;"></div>
-    <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>GCSE Maths</strong></p><p>This Maths course aims to introduce you to core mathematical concepts and techniques that are essential for more advanced Maths courses. After you have done this course, solving most Maths problems will become second nature to you.</p></div>
+        <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>GCSE Maths</strong></p><p>This Maths course aims to introduce you to core mathematical concepts and techniques that are essential for more advanced Maths courses. After you have done this course, solving most Maths problems will become second nature to you.</p></div>
         @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "1" }, new { })
-       
     </div>
 </div>
 
@@ -18,7 +17,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/GCSEEnglishPic.png" alt="GCSEEnglish" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>GCSE English</strong></p> <p>Our Online GCSE English Course will give you a great basis to improve your vocabulary, grammar, spelling and punctuation. You will gain access to a variety of reading materials and media. We will show you easy techniques to improve your imaginative writing. </p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses", 2)'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "2" }, new { })
     </div>
 </div>
 
@@ -26,7 +25,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/GCSESciencePic.png" alt="GCSEScience" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>GCSE Science</strong></p><p>Much of our everyday life relies on good understanding of the world we live in. This GCSE Science course will prepare you and provide you with all the relevant information in Physics, Chemistry and Biology. Your understanding will be tested throughout this course.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses",3)'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "3" }, new { })
     </div>
 </div>
 
@@ -34,7 +33,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/ALevelMathsPic.png" alt="ALevelMaths" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>A Level Maths</strong></p> <p>This highly rated online A Level Maths course will offer you important analytical skills and techniques. You will gain plenty of opportunities to practice throughout this course. Topics covered include Algebra, Differentiation, Integration, Trigonometry, Exponentials and Logarithms and Vectors.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "4" }, new { })
     </div>
 </div>
 
@@ -42,7 +41,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/ALevelPhyPic.png" alt="ALevelPhy" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"> <p><strong>A Level Physics</strong></p><p>This advanced Physics course goes deep into the subject. This course focuses heavily on applying the information learned to real-life applications. Going through the exam-style questions and solutions in this course will guide you towards excellent grades.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "5" }, new { })
     </div>
 </div>
 
@@ -50,7 +49,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/ALevelChemPic.png" alt="ALevelChem" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>A Level Chemistry</strong></p><p>This course breaks down the concepts into easy parts and ensures that you understand them and are able to apply them to typical exam questions. If you follow this course, you will have no problems in answering the majority of exam questions.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "6" }, new { })
     </div>
 </div>
 
@@ -58,7 +57,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/ALevelBioPic.png" alt="ALevelBio" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"> <p><strong>A Level Biology</strong></p> <p>This course will go through all the topics to suceed your A Level Biology. The course includes revision sections and provides up-to-date material. Topics covered include Biological Molecules, Cells, Genetic Information and the Response of Organisms to their Environment. </p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "7" }, new { })
     </div>
 </div>
 
@@ -66,7 +65,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/French.png" alt="French" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>French for Beginners</strong></p> <p>This language course is a fun and effective way to learn French from no knowledge whatsoever in the language. It is fully interactive and involves sections that include videos and other documents to help you learn. There is also a pronounciation tool which will allow you to speak just like a native.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "8" }, new { })
     </div>
 </div>
 
@@ -74,7 +73,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/German.png" alt="German" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>German for Beginners</strong></p><p><p>This language course is a fun and effective way to learn German from scratch. It is interactive and it will allow you to communicate effectively within a few weeks. There is a variety of videos and exercises to suit your own pace.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "9" }, new { })
     </div>
 </div>
 
@@ -82,7 +81,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/Spanish.png" alt="Spanish" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>Spanish for Beginners</strong></p><p>Spanish is an incredible language to learn as it is used throughout the world. Improve your verbal and written understanding of the language and practice speaking with this course. The videos and are extremely interesting and they will give you an insight into Spanish culture and traditions.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "10" }, new { })
     </div>
 </div>
 
@@ -90,7 +89,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-xs-12 image-container"><img src="/Pictures/Python.png" alt="Python" style="width:304px;height:228px;"></div>
         <div class="col-sm-6 col-md-6 col-xs-12"><p><strong>Programming in Python</strong></p> <p>Getting into programming can be very difficult particularly if you are learning on your own. This programming course is targeted to complete beginners. Short exercises have been designed to help you become a Python programmer and step-by-step solutions have been provided with this course.</p></div>
-        <button type="button" class="btn btn-primary btn-lg btn-success pull-right" onclick="location.href='@Url.Action("AddCourseToCart", "Courses")'"><strong>Try It Now</strong></button>
+        @Html.ActionLink("Try it Now", "AddCourseToCart", "Courses", new { id = "11" }, new { })
     </div>
 </div>
 
