@@ -1187,5 +1187,9 @@ namespace OnlineTrainingTests
             repositMock.Verify(c => c.RemoveCustomerById(1));      
 
         }
+
+        //Tests for OnlineTraining.WebUI
+        
+
     }
 }

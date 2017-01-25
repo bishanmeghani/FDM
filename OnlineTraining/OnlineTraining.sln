@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTraining.UI", "Online
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTrainingWebUI", "OnlineTrainingWebUI\OnlineTrainingWebUI.csproj", "{C1762D95-5011-4F7B-BE18-D83A3840E6A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTrainingWPF", "OnlineTrainingWPF\OnlineTrainingWPF.csproj", "{B1F3B6B5-71D2-4FA8-BA21-54E3572AB53C}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -48,6 +50,10 @@ Global
 		{C1762D95-5011-4F7B-BE18-D83A3840E6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1762D95-5011-4F7B-BE18-D83A3840E6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1762D95-5011-4F7B-BE18-D83A3840E6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1F3B6B5-71D2-4FA8-BA21-54E3572AB53C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F3B6B5-71D2-4FA8-BA21-54E3572AB53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F3B6B5-71D2-4FA8-BA21-54E3572AB53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F3B6B5-71D2-4FA8-BA21-54E3572AB53C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
