@@ -30,7 +30,7 @@ namespace OnlineTraining.EntityFramework
             return _context.performances.ToList();
         }
 
-        public void AddCustomer(Customers customerToAdd)
+        public virtual void AddCustomer(Customers customerToAdd)
         {
             _context.customers.Add(customerToAdd);
             _context.SaveChanges();
@@ -187,7 +187,7 @@ namespace OnlineTraining.EntityFramework
             _context.SaveChanges();
         }
 
-        public bool CheckIfUserHasAnAccount(string checkedEmailAddress)
+        public virtual bool CheckIfUserHasAnAccount(string checkedEmailAddress)
         {
             var query = from c in _context.customers where c.customerEmail == checkedEmailAddress select c;
 
@@ -201,7 +201,7 @@ namespace OnlineTraining.EntityFramework
             return false;
         }
         
-        public bool CheckUserPassword(string checkedPassword)
+        public virtual bool CheckUserPassword(string checkedPassword)
         {
             var query = from c in _context.customers where c.customerPassword == checkedPassword select c;
 
