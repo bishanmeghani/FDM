@@ -1,0 +1,17 @@
+﻿<Window x:Class="OnlineTrainingWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:OnlineTrainingWPF.ViewModels"
+        Title="Proposed Courses" Height="350" Width="525">
+
+    <StackPanel>
+        <TextBlock Text="What course would you like to propose?"/>
+        <TextBox Name="ProposedCourseTextBox" Text="{Binding CourseMessage}"/>
+        <TextBlock Text="What is the duration of the course in hours?"/>
+        <TextBox Name="CourseDurationTextBox" Text="{Binding CourseDurationMessage}"/>
+        <Button Click="Button_Click" Content="Click" Style="{StaticResource CircleButton}"/>
+
+    </StackPanel>
+
+
+</Window>
