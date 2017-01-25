@@ -23,10 +23,10 @@ namespace OnlineTraining.EntityFramework
         public virtual string customerLastName { get; set; }
 
         [DisplayName("Address")]
-        public string customerAddress { get; set; }
+        public virtual string customerAddress { get; set; }
 
         [DisplayName("Phone number")]
-        public string customerPhone { get; set; }
+        public virtual string customerPhone { get; set; }
 
         [DisplayName("Email address")]
         public virtual string customerEmail { get; set; }

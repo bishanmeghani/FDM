@@ -17,12 +17,12 @@ namespace OnlineTraining.EntityFramework
         public virtual string courseName { get; set; }
 
         [DisplayName("Rating")]
-        public int courseRating { get; set; }
+        public virtual int courseRating { get; set; }
 
         [DisplayName("Course Length (hours)")]
-        public int courseDurationHours { get; set; }
+        public virtual int courseDurationHours { get; set; }
 
         [DisplayName("Course Price (£)")]
-        public double coursePrice { get; set; }
+        public virtual double coursePrice { get; set; }
     }
 }
