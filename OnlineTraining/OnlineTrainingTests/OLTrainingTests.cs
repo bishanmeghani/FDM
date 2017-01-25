@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OnlineTraining.DataAccess;
 using OnlineTraining.Logic;
 using OnlineTraining.EntityFramework;
 using System.Collections.Generic;
@@ -10,9 +9,18 @@ using Moq;
 
 namespace OnlineTrainingTests
 {
+
     [TestClass]
     public class OLTrainingTests
     {
+
+        [TestInitialize]
+        public void Setup()
+        {
+
+        }
+        // Tests for OnlineTraining.EntityFramework
+
         [TestMethod]
         public void Test_GetAllCoursesReturnsAllCourses()
         {
@@ -959,6 +967,202 @@ namespace OnlineTrainingTests
 
             //Assert
             Assert.AreEqual(false, actual);
+        }
+
+        // Tests for OnlineTraining.Logic
+
+        [TestMethod]
+        public void Test_CheckIfCustomerLoginReturns1IfUserAlreadyHasAnAccountAndTheirPasswordIsCorrect()
+        {
+            //Arrange
+            Mock<Customers> customerExisting = new Mock<Customers>();
+
+            List<Customers> customerList = new List<Customers>();
+            customerList = new List<Customers> { customerExisting.Object };
+
+            customerExisting.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+            customerExisting.Setup(c => c.customerPassword).Returns("123");
+
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> mockRepo = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(mockRepo.Object);
+
+            mockRepo.Setup(c => c.CheckIfUserHasAnAccount("abc@hotmail.com")).Returns(true);
+            mockRepo.Setup(c => c.CheckUserPassword("123")).Returns(true);
+
+
+            //Act
+
+            int actual = classUnderTest.CustomerLogin(customerExisting.Object);
+
+            //Assert
+            Assert.AreEqual(1, actual);
+        }
+
+        [TestMethod]
+        public void Test_CheckIfCustomerLoginReturns2IfUserDoesntHaveAnAccount()
+        {
+            //Arrange
+            Mock<Customers> customerExisting = new Mock<Customers>();
+
+            List<Customers> customerList = new List<Customers>();
+            customerList = new List<Customers> { customerExisting.Object };
+
+            customerExisting.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+            customerExisting.Setup(c => c.customerPassword).Returns("123");
+
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> mockRepo = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(mockRepo.Object);
+
+            mockRepo.Setup(c => c.CheckIfUserHasAnAccount("abc@hotmail.com")).Returns(false);
+            mockRepo.Setup(c => c.CheckUserPassword("123")).Returns(true);
+
+
+            //Act
+
+            int actual = classUnderTest.CustomerLogin(customerExisting.Object);
+
+            //Assert
+            Assert.AreEqual(2, actual);
+        }
+
+        [TestMethod]
+        public void Test_CheckIfCustomerLoginReturns3IfUserHasAnAccountButWrongPassword()
+        {
+            //Arrange
+            Mock<Customers> customerExisting = new Mock<Customers>();
+
+            List<Customers> customerList = new List<Customers>();
+            customerList = new List<Customers> { customerExisting.Object };
+
+            customerExisting.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+            customerExisting.Setup(c => c.customerPassword).Returns("123");
+
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> mockRepo = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(mockRepo.Object);
+
+            mockRepo.Setup(c => c.CheckIfUserHasAnAccount("abc@hotmail.com")).Returns(true);
+            mockRepo.Setup(c => c.CheckUserPassword("123")).Returns(false);
+
+
+            //Act
+
+            int actual = classUnderTest.CustomerLogin(customerExisting.Object);
+
+            //Assert
+            Assert.AreEqual(3, actual);
+        }
+
+        [TestMethod]
+        public void Test_CheckIfCustomerLoginReturns0IfWrongEmailWrongPassword()
+        {
+            //Arrange
+            Mock<Customers> customerExisting = new Mock<Customers>();
+
+            List<Customers> customerList = new List<Customers>();
+            customerList = new List<Customers> { customerExisting.Object };
+
+            customerExisting.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+            customerExisting.Setup(c => c.customerPassword).Returns("123");
+
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> mockRepo = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(mockRepo.Object);
+
+            mockRepo.Setup(c => c.CheckIfUserHasAnAccount("abc@hotmail.com")).Returns(false);
+            mockRepo.Setup(c => c.CheckUserPassword("123")).Returns(false);
+
+
+            //Act
+
+            int actual = classUnderTest.CustomerLogin(customerExisting.Object);
+
+            //Assert
+            Assert.AreEqual(0, actual);
+        }
+
+        [TestMethod]
+        public void Test_CheckIfCustomerRegisterReturnsTrueIfUserHasAnAccount()
+        {
+            //Arrange
+            Mock<Customers> customerChecked = new Mock<Customers>();
+
+            List<Customers> customerList = new List<Customers>();
+            customerList = new List<Customers> { customerChecked.Object };
+
+            customerChecked.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+            customerChecked.Setup(c => c.customerPassword).Returns("123");
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> mockRepo = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(mockRepo.Object);
+
+            mockRepo.Setup(c => c.CheckIfUserHasAnAccount("abc@hotmail.com")).Returns(true);
+            mockRepo.Setup(c => c.AddCustomer(customerChecked.Object)).Verifiable();
+
+            //Act
+           
+            bool actual = classUnderTest.CustomerRegister(customerChecked.Object);
+
+            //Assert
+            Assert.AreEqual(true, actual);
+        }
+
+        [TestMethod]
+        public void Test_CheckIfCustomerRegisterCallsAddCustomerMethodIfUserDoesntHaveAnAccount()
+        {
+            //Arrange
+
+            Mock<Customers> customerChecked = new Mock<Customers>();
+
+            customerChecked.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();            
+            Mock<Reposit> repositMock = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(repositMock.Object);   
+       
+            repositMock.Setup(c => c.CheckIfUserHasAnAccount(customerChecked.Object.customerEmail)).Returns(false);
+            repositMock.Setup(c => c.AddCustomer(customerChecked.Object)).Verifiable();
+            
+
+            //Act
+            classUnderTest.CustomerRegister(customerChecked.Object);
+
+            //Assert
+            repositMock.Verify(c => c.AddCustomer(customerChecked.Object));            
+        }
+
+        [TestMethod]
+        public void Test_CheckIfCustomerRegisterReturnsFalseIfUserDoesntHaveAnAccount()
+        {
+            //Arrange
+            Mock<Customers> customerExisting = new Mock<Customers>();
+
+            List<Customers> customerList = new List<Customers>();
+            customerList = new List<Customers> { customerExisting.Object };
+
+            customerExisting.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+
+
+            CustomerLogic classUnderTest = new CustomerLogic(contextMock.Object);
+
+            //Act
+
+            Mock<Customers> customerChecked = new Mock<Customers>();
+            customerChecked.Setup(c => c.customerEmail).Returns("def@hotmail.com");
+            bool actual = classUnderTest.CustomerRegister(customerChecked.Object);
+
+            //Assert
+            Assert.AreEqual(false, actual);
+
         }
     }
 }

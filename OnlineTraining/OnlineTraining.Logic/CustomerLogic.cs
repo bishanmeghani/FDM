@@ -23,30 +23,36 @@ namespace OnlineTraining.Logic
             _context = context;
         }
 
+        public CustomerLogic(Reposit Repository)
+        {
+            repository = Repository;
+        }
+
         public int CustomerLogin(Customers customerToLogin)
         {
-            repository = new Reposit(_context);
-            //If Email and password match, you are logged in
+            //repository = new Reposit(_context);
+            //If Email exists and password match, you are logged in
             if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == true)
             {
                 return 1;
             }
-
-            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == false)
+            //If Email doesn't exists you need to register
+            if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == false && repository.CheckUserPassword(customerToLogin.customerPassword) == true)
             {
                 return 2;
             }
-
+            //If Email exists but wrong password
             if (repository.CheckIfUserHasAnAccount(customerToLogin.customerEmail) == true && repository.CheckUserPassword(customerToLogin.customerPassword) == false)
             {
                 return 3;
             }
+            //If wrong email and wrong password
             return 0;
         }
 
         public bool CustomerRegister(Customers customerToRegister)
         {
-            repository = new Reposit(_context);
+            //repository = new Reposit(_context);
             if (repository.CheckIfUserHasAnAccount(customerToRegister.customerEmail) == true)
             {
                 return true;
@@ -57,7 +63,7 @@ namespace OnlineTraining.Logic
 
         public void RemoveAccount(Customers customerToRemove)
         {
-            repository = new Reposit(_context);
+            //repository = new Reposit(_context);
             repository.RemoveCustomerById(customerToRemove.customerId);
         }
     }

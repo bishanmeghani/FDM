@@ -70,10 +70,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OnlineTraining.DataAccess\OnlineTraining.DataAccess.csproj">
-      <Project>{d3d3040e-b872-4b60-834f-8ecef3af0c24}</Project>
-      <Name>OnlineTraining.DataAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OnlineTraining.EntityFramework\OnlineTraining.EntityFramework.csproj">
       <Project>{78e8e3c4-02eb-489b-abb7-3799d8b85f8e}</Project>
       <Name>OnlineTraining.EntityFramework</Name>
