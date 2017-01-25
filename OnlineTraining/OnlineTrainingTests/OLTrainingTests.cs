@@ -1142,26 +1142,49 @@ namespace OnlineTrainingTests
         public void Test_CheckIfCustomerRegisterReturnsFalseIfUserDoesntHaveAnAccount()
         {
             //Arrange
-            Mock<Customers> customerExisting = new Mock<Customers>();
+            Mock<Customers> customerChecked = new Mock<Customers>();
 
             List<Customers> customerList = new List<Customers>();
-            customerList = new List<Customers> { customerExisting.Object };
+            customerList = new List<Customers> { customerChecked.Object };
 
-            customerExisting.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
+            customerChecked.Setup(c => c.customerEmail).Returns("abc@hotmail.com");
 
             Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> repositMock = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(repositMock.Object);
 
-
-            CustomerLogic classUnderTest = new CustomerLogic(contextMock.Object);
-
+            repositMock.Setup(c => c.CheckIfUserHasAnAccount(customerChecked.Object.customerEmail)).Returns(false);
+            
             //Act
-
-            Mock<Customers> customerChecked = new Mock<Customers>();
-            customerChecked.Setup(c => c.customerEmail).Returns("def@hotmail.com");
             bool actual = classUnderTest.CustomerRegister(customerChecked.Object);
 
             //Assert
             Assert.AreEqual(false, actual);
+
+        }
+
+        [TestMethod]
+        public void Test_CheckIfRemoveAccountMethodRemovesAccount()
+        {
+            //Arrange
+            Mock<Customers> customerRemoved = new Mock<Customers>();
+
+            List<Customers> customerList = new List<Customers>();
+            customerList = new List<Customers> { customerRemoved.Object };
+
+            customerRemoved.Setup(c => c.customerId).Returns(1);
+
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> repositMock = new Mock<Reposit>(contextMock.Object);
+            CustomerLogic classUnderTest = new CustomerLogic(repositMock.Object);
+            repositMock.Setup(c => c.RemoveCustomerById(customerRemoved.Object.customerId)).Verifiable();
+
+
+            //Act
+            classUnderTest.RemoveAccount(customerRemoved.Object);
+
+            //Assert
+            repositMock.Verify(c => c.RemoveCustomerById(1));      
 
         }
     }

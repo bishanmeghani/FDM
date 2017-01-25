@@ -48,7 +48,7 @@ namespace OnlineTraining.EntityFramework
             _context.SaveChanges();
         }
 
-        public void RemoveCustomerById(int customerToRemoveId)
+        public virtual void RemoveCustomerById(int customerToRemoveId)
         {
             var query = from c in _context.customers where c.customerId == customerToRemoveId select c;
 

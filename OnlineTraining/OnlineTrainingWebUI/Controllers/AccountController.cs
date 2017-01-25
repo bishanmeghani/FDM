@@ -81,7 +81,6 @@ namespace OnlineTrainingWebUI.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-
         [HttpPost]
         public ActionResult Register(Customers customerToRegister)
         {
@@ -118,6 +117,5 @@ namespace OnlineTrainingWebUI.Controllers
             
             return View(cartlogic.GetAllItems());
         }
-        
     }  
 }
