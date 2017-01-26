@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineTraining.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,33 +11,63 @@ namespace OnlineTrainingWPF.ViewModels
 {
     public class AdvancedViewModel : BaseViewModel
     {
-        private string _message;
-        public string message
+        Reposit repository;
+        OnlineTrainingModel ModelDb;
+
+        public AdvancedViewModel() 
         {
-            get { return _message; }
-            set
-            {
-                _message = value;
-                OnPropertyChanged("message");
+            ModelDb = new OnlineTrainingModel();
+            repository = new Reposit(ModelDb);
+        }
+
+        private Customers _customer;
+
+        public Customers customer
+        {
+            get { return _customer; }
+            set 
+            { 
+                _customer = value; 
+                OnPropertyChanged("customer"); 
             }
         }
 
-        private bool CanChangeText()
+        private List<Customers> _customerList;
+
+        public List<Customers> customerList
         {
-            //we could put logic in here to test whether the button can be clicked
+            get { return _customerList; }
+            set 
+            { 
+                _customerList = value; 
+                OnPropertyChanged("customerList"); 
+            }
+        }
+
+        private ICommand _showListCommand;
+
+        public ICommand showListCommand
+        {
+            get 
+            {
+                if (_showListCommand == null)
+                {
+                    _showListCommand = new Command(GetCustomers, CanGetCustomers);
+                }
+                return _showListCommand; 
+            }
+            set { _showListCommand = value; }
+        }
+
+        public void GetCustomers()
+        {
+            customerList = repository.GetAllCustomers();
+        }
+
+        public bool CanGetCustomers()
+        {
             return true;
         }
-
-        private void ChangeText()
-        {
-            message = "Today is Friday";
-        }
-
-        public AdvancedViewModel()
-        {
-            message = "Today is Tuesday!";
-        }
-
         
     }
 }

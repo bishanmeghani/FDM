@@ -4,12 +4,29 @@
         xmlns:vm="clr-namespace:OnlineTrainingWPF.ViewModels"
         Title="Proposed Courses" Height="350" Width="525">
 
+    <Window.DataContext>
+        <vm:AdvancedViewModel/>
+    </Window.DataContext>
+    
     <StackPanel>
-        <TextBlock Text="What course would you like to propose?"/>
-        <TextBox Name="ProposedCourseTextBox" Text="{Binding CourseMessage}"/>
-        <TextBlock Text="What is the duration of the course in hours?"/>
-        <TextBox Name="CourseDurationTextBox" Text="{Binding CourseDurationMessage}"/>
-        <Button Click="Button_Click" Content="Click" Style="{StaticResource CircleButton}"/>
+        <TextBlock Text="Please press the button below to view all our customers:" FontSize="20" FontFamily="Calibri" Foreground="Purple"/>
+        <Button Content="Click" Command="{Binding showListCommand}" Style="{StaticResource CircleButton}"/>
+        <ListBox HorizontalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding customerList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding customerId}" Margin="10"/>
+                        <TextBlock Grid.Column="1" Text="{Binding customerFirstName}" Margin="10"/>
+                        <TextBlock Grid.Column="2" Text="{Binding customerLastName}" Margin="10"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </StackPanel>
 
 

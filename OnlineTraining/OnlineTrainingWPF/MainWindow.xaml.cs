@@ -24,10 +24,5 @@ namespace OnlineTrainingWPF
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            CourseDurationTextBox.Text = "Big Button";
-        }
     }
 }
