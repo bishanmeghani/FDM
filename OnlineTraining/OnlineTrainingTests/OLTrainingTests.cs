@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Moq;
+using OnlineTrainingWebUI.Controllers;
+using System.Web.Mvc;
+using System.Web;
 
 namespace OnlineTrainingTests
 {
@@ -1187,9 +1190,253 @@ namespace OnlineTrainingTests
             repositMock.Verify(c => c.RemoveCustomerById(1));      
 
         }
+        
+        [TestMethod]
+        public void Test_AddToCartMethodAddsToCart()
+        {
+
+            Courses itemAdded = new Courses();
+
+            List<Courses> courseList = new List<Courses>();
+
+            ShoppingCartLogic classUnderTest = new ShoppingCartLogic(courseList);
+
+            //Act
+            classUnderTest.AddToCart(itemAdded);
+
+            //Assert
+
+            Assert.AreEqual(1, courseList.Count());
+        }
+
+        [TestMethod]
+        public void Test_RemoveFromCartMethodRemovesFromCart()
+        {
+
+            Courses itemToRemove = new Courses();
+
+            List<Courses> courseList = new List<Courses>();
+            courseList.Add(itemToRemove);
+
+            ShoppingCartLogic classUnderTest = new ShoppingCartLogic(courseList);
+
+            //Act
+            classUnderTest.AddToCart(itemToRemove);
+            classUnderTest.RemoveFromCart(itemToRemove);
+
+            //Assert
+
+            Assert.AreEqual(1, courseList.Count());
+        }
+
+        [TestMethod]
+        public void Test_EmptyTheCartMethodEmptiesCart()
+        {
+
+            Courses itemToAdd1 = new Courses();
+            Courses itemToAdd2 = new Courses();
+
+            List<Courses> courseList = new List<Courses>();
+            courseList.Add(itemToAdd1);
+            courseList.Add(itemToAdd2);
+
+            ShoppingCartLogic classUnderTest = new ShoppingCartLogic(courseList);
+
+            //Act
+
+            classUnderTest.EmptyTheCart();
+
+            //Assert
+
+            Assert.AreEqual(0, courseList.Count());
+        }
+
+        [TestMethod]
+        public void Test_GetAllItemsMethodReturnsAllItems()
+        {
+
+            Courses itemToAdd1 = new Courses();
+            Courses itemToAdd2 = new Courses();
+
+            List<Courses> courseList = new List<Courses>();
+            courseList.Add(itemToAdd1);
+            courseList.Add(itemToAdd2);
+
+            ShoppingCartLogic classUnderTest = new ShoppingCartLogic(courseList);
+
+            //Act
+
+            List<Courses> myItems = classUnderTest.GetAllItems();
+
+            //Assert
+
+            CollectionAssert.AreEqual(courseList, myItems);
+        }
+
+        [TestMethod]
+        public void Test_GetCourseMethodReturnsCorrectCourse()
+        {
+            Mock<Courses> courseSearched = new Mock<Courses>();
+
+            List<Courses> courseList = new List<Courses>();
+            courseList.Add(courseSearched.Object);
+
+            courseSearched.Setup(c => c.courseId).Returns(1);
+
+            var testData = new List<Courses>()
+            {
+                courseSearched.Object
+            }.AsQueryable();
+            
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> mockRepo = new Mock<Reposit>(contextMock.Object); 
+            mockRepo.Setup(c => c.GetCourseById(courseSearched.Object.courseId)).Returns(courseSearched.Object);
+
+            ShoppingCartLogic classUnderTest = new ShoppingCartLogic(courseList);
+            classUnderTest.repo = mockRepo.Object;
+            
+            //Act
+            Courses myCourse = classUnderTest.GetCourse(courseSearched.Object.courseId);
+
+            //Assert
+            Assert.AreEqual(courseSearched.Object.courseId, myCourse.courseId);
+        }
+
 
         //Tests for OnlineTraining.WebUI
         
+        [TestMethod]
+        public void Test_IndexMethodInHomeController_ReturnsIndexView()
+        {
+            //Arrange
+            var expected = "Index";
+            HomeController classUnderTest = new HomeController();
 
+            //Act
+            var actual = classUnderTest.Index() as ViewResult;
+
+            //Assert
+            Assert.AreEqual(expected, actual.ViewName);
+        }
+
+        [TestMethod]
+        public void Test_AboutMethodInHomeController_ReturnsAboutView()
+        {
+            var expected = "About";
+
+            HomeController classUnderTest = new HomeController();
+
+            var actual = classUnderTest.About() as ViewResult;
+
+            Assert.AreEqual(expected, actual.ViewName);
+        }
+
+        [TestMethod]
+        public void Test_ContactMethodInHomeController_ReturnsContactView()
+        {
+            var expected = "Contact";
+
+            HomeController classUnderTest = new HomeController();
+
+            var actual = classUnderTest.Contact() as ViewResult;
+
+            Assert.AreEqual(expected, actual.ViewName);
+        }
+
+        //[TestMethod]
+        //public void Test_IndexMethodInCoursesController_ReturnsIndexView()
+        //{
+        //    var expected = "Index";
+
+        //    CoursesController classUnderTest = new CoursesController();
+
+        //    var actual = classUnderTest.Index() as ViewResult;
+
+        //    Assert.AreEqual(expected, actual.ViewName);
+        //}
+
+        [TestMethod]
+        public void Test_OverviewMethodInCoursesController_ReturnsOverviewView()
+        {
+            var expected = "Overview";
+
+            CoursesController classUnderTest = new CoursesController();
+
+            var actual = classUnderTest.Overview() as ViewResult;
+
+            Assert.AreEqual(expected, actual.ViewName);
+        }
+
+        //[TestMethod]
+        //public void Test_AddCourseToCartMethodInCoursesController_RedirectsToCart()
+        //{
+        //    var expected = "Cart";
+
+        //    CoursesController classUnderTest = new CoursesController();
+
+        //    var actual = classUnderTest.AddCourseToCart() as RedirectToRouteResult;
+
+        //    Assert.AreEqual(expected, actual.RouteValues["Cart"]);
+        //}
+
+        [TestMethod]
+        public void Test_DeleteMyAccountMethodInAccountController_RedirectsToIndexView()
+        {
+            var expected = "Index";
+
+            AccountController classUnderTest = new AccountController();
+            var actual = classUnderTest.DeleteMyAccount() as RedirectToRouteResult;
+            
+            Assert.AreEqual(expected, actual.RouteValues["action"]);
+        }
+
+        [TestMethod]
+        public void Test_LoginMethodInAccountController_ReturnsLoginView()
+        {
+            var expected = "Login";
+
+            AccountController classUnderTest = new AccountController();
+
+            var actual = classUnderTest.Login() as ViewResult;
+
+            Assert.AreEqual(expected, actual.ViewName);
+        }
+
+        [TestMethod]
+        public void Test_RegisterMethodInAccountController_ReturnsRegisterView()
+        {
+            var expected = "Register";
+
+            AccountController classUnderTest = new AccountController();
+
+            var actual = classUnderTest.Register() as ViewResult;
+
+            Assert.AreEqual(expected, actual.ViewName);
+        }
+
+
+        [TestMethod]
+        public void Test_RegisterMethodInAccountController_ReturnsUnsuccessfulRegisterView()
+        {
+            Mock<OnlineTrainingModel> contextMock = new Mock<OnlineTrainingModel>();
+            Mock<Reposit> repositMock = new Mock<Reposit>(contextMock.Object);
+            Mock<CustomerLogic> logicMock = new Mock<CustomerLogic>(repositMock.Object);
+            
+            var mockRequest = new Mock<HttpRequestBase>();
+            mockRequest.Setup(x => x["X-Requested-With"]).Returns("XMLHttpRequest");
+
+            var mockHttpContext = new Mock<HttpContextBase>();
+            mockHttpContext.SetupGet(x => x.Request).Returns(mockRequest.Object);
+
+            var controllerCtx = new ControllerContext();
+            controllerCtx.HttpContext = mockHttpContext.Object;
+
+            AccountController classUnderTest = new AccountController();
+            classUnderTest.ControllerContext = controllerCtx;
+
+            var actual = classUnderTest.Register() as PartialViewResult;
+
+            Assert.AreEqual("_SuccessRegister", actual.ViewName);
+        }
     }
 }

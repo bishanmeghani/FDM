@@ -11,16 +11,16 @@ namespace OnlineTrainingWebUI.Controllers
         [HttpGet]        
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View("About");
         }
 
         [HttpGet]
@@ -28,7 +28,7 @@ namespace OnlineTrainingWebUI.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View("Contact");
         }
     }
 }

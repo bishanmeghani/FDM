@@ -10,7 +10,6 @@
         <TextBlock Text="What is the duration of the course in hours?"/>
         <TextBox Name="CourseDurationTextBox" Text="{Binding CourseDurationMessage}"/>
         <Button Click="Button_Click" Content="Click" Style="{StaticResource CircleButton}"/>
-
     </StackPanel>
 
 

@@ -11,6 +11,7 @@ namespace OnlineTraining.EntityFramework
     {
         [Key]
         public int cartId { get; set; }
+
         public List<Courses> cartCourses { get; set; }
     }
 }
