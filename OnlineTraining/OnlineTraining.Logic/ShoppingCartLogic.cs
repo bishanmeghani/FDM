@@ -25,11 +25,11 @@ namespace OnlineTraining.Logic
         List<Courses> myItems;
         int numberOfItems;
         double totalPrice;
-        Reposit repo;
+        public Reposit repo;
 
-        public ShoppingCartLogic()
+        public ShoppingCartLogic(List<Courses> _myItems)
         {
-            myItems = new List<Courses>();
+            myItems = _myItems;
             numberOfItems = 0;
             totalPrice = 0.0;
         }
@@ -76,18 +76,11 @@ namespace OnlineTraining.Logic
 
         public Courses GetCourse(int courseId)
         {
-            repo = new Reposit(new OnlineTrainingModel());
+            //repo = new Reposit(new OnlineTrainingModel());
 
             Courses theCourse = repo.GetCourseById(courseId);
-
-           if (theCourse != null)
-           {
-               return theCourse;
-           }
-           else
-           {
-               return new Courses();
-           }           
+            return theCourse;
+                    
         }
     }
 }

@@ -61,8 +61,7 @@ namespace OnlineTrainingWebUI.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(customerToLogin);
-        }
-            
+        }  
         
         [HttpPost]
         public ActionResult LogOff()
@@ -99,23 +98,23 @@ namespace OnlineTrainingWebUI.Controllers
         [HttpGet]
         public ActionResult Login()
         {
-            return View();
+            return View("Login");
         }
 
         [HttpGet]
         public ActionResult Register()
         {
-            return View();
+            return View("Register");
         }
 
-        [HttpGet]
-        public ActionResult Cart()
-        {
-            cartlogic = new ShoppingCartLogic();
-            //cartlogic.AddToCart(new CartItem { ProductName = "maths" });
+        //[HttpGet]
+        //public ActionResult Cart()
+        //{
+        //    cartlogic = new ShoppingCartLogic();
+        //    //cartlogic.AddToCart(new CartItem { ProductName = "maths" });
 
             
-            return View(cartlogic.GetAllItems());
-        }
+        //    return View(cartlogic.GetAllItems());
+        //}
     }  
 }

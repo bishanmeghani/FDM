@@ -53,22 +53,22 @@ namespace OnlineTrainingWebUI.Controllers
                     cs = cs.OrderBy(c => c.courseName);
                     break;
             }
-            return View(cs.ToList());
+            return View("Index", cs.ToList());
         }
 
         public ActionResult Overview()
         {
-            return View();
+            return View("Overview");
         }
 
-        public ActionResult AddCourseToCart(string id)
-        {
-            cartlogic = new ShoppingCartLogic();
-            int myId = Convert.ToInt32(id);
-            Courses courseToPutInCart = cartlogic.GetCourse(myId);
-            cartlogic.AddToCart(courseToPutInCart);
-            return RedirectToAction("Cart", "Account");
-        }
+        //public ActionResult AddCourseToCart(string id)
+        //{
+        //    cartlogic = new ShoppingCartLogic();
+        //    int myId = Convert.ToInt32(id);
+        //    Courses courseToPutInCart = cartlogic.GetCourse(myId);
+        //    cartlogic.AddToCart(courseToPutInCart);
+        //    return RedirectToAction("Cart", "Account");
+        //}
 
     }
 }
