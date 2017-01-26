@@ -74,6 +74,7 @@ namespace OnlineTrainingWebUI.Controllers
         {
             clogic = new CustomerLogic(modeldb);
 
+            //Customers customerToDelete = new Customers();
             Customers customerToDelete = modeldb.customers.Where(c => c.customerEmail == User.Identity.Name).ToList()[0];
 
             clogic.RemoveAccount(customerToDelete);

@@ -1384,7 +1384,10 @@ namespace OnlineTrainingTests
         {
             var expected = "Index";
 
+            var customerLogicMock = new Mock<CustomerLogic>();
             AccountController classUnderTest = new AccountController();
+
+
             var actual = classUnderTest.DeleteMyAccount() as RedirectToRouteResult;
             
             Assert.AreEqual(expected, actual.RouteValues["action"]);
@@ -1413,7 +1416,6 @@ namespace OnlineTrainingTests
 
             Assert.AreEqual(expected, actual.ViewName);
         }
-
 
         [TestMethod]
         public void Test_RegisterMethodInAccountController_ReturnsUnsuccessfulRegisterView()

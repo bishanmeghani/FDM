@@ -21,6 +21,7 @@ namespace OnlineTraining.Logic
         public CustomerLogic(OnlineTrainingModel context)
         {
             _context = context;
+            repository = new Reposit(context);
         }
 
         public CustomerLogic(Reposit Repository)
@@ -66,5 +67,11 @@ namespace OnlineTraining.Logic
             //repository = new Reposit(_context);
             repository.RemoveCustomerById(customerToRemove.customerId);
         }
+
+        //public void CustomerEmailToName(OnlineTrainingModel context)
+        //{
+        //    modeldb.customers.Where(c => c.customerEmail == User.Identity.Name).ToList()[0];
+        //}
+        
     }
 }
