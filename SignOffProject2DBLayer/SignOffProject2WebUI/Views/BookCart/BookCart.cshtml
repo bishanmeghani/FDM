@@ -3,19 +3,19 @@
     ViewBag.Title = "BookCart";
 }
 
-<h2>BookCart</h2>
+<h2>Book Cart</h2>
 
 <table class="table">
     <tr>
-        <th>@Html.ActionLink("Book title", "BookCart")</th>
-        <th>@Html.ActionLink("Book price", "BookCart")</th>
+        <th>@Html.DisplayNameFor(model => model.title)</th>
+        <th>@Html.DisplayNameFor(model => model.price)</th>
     </tr>
 
     @foreach (var book in Model)
     {
         <tr>
-            <td>@Html.DisplayFor(model => book.title)</td>
-            <td>@Html.DisplayFor(model => book.price)</td>
+            <td>@Html.DisplayFor(modelItem => book.title)</td>
+            <td>@Html.DisplayFor(modelItem => book.price)</td>
         </tr>
     }
 </table>
