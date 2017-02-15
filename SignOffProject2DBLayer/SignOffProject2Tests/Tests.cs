@@ -73,7 +73,7 @@ namespace SignOffProject2Tests
         }
 
         [TestMethod]
-        public void Test_AddToCartInLogic_AddsBookToCart()
+        public void Test_AddToCartInLogic_CallsAddBook()
         {
             //Arrange        
             
