@@ -10,6 +10,7 @@ namespace SignOffProject2Logic
     public interface IBookLogic
     {
         void AddToCart(Book book);
+        List<Book> ViewAllBooks();
     }
 
     public class BookLogic : IBookLogic
@@ -42,6 +43,7 @@ namespace SignOffProject2Logic
         {
             try
             {
+                books = repository.GetAllBooks();
                 return books;
             }
             catch (Exception e)
