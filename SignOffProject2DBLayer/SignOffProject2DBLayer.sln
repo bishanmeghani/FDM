@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignOffProject2DBLayer", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignOffProject2WebUI", "SignOffProject2WebUI\SignOffProject2WebUI.csproj", "{E6CA7B5A-7924-4E3D-9673-A0161EAB08DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignOffProject2Logic", "SignOffProject2Logic\SignOffProject2Logic.csproj", "{D862CB99-1CBB-4BE8-BA23-36FCE1708E8A}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -25,6 +27,10 @@ Global
 		{E6CA7B5A-7924-4E3D-9673-A0161EAB08DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CA7B5A-7924-4E3D-9673-A0161EAB08DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CA7B5A-7924-4E3D-9673-A0161EAB08DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D862CB99-1CBB-4BE8-BA23-36FCE1708E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D862CB99-1CBB-4BE8-BA23-36FCE1708E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D862CB99-1CBB-4BE8-BA23-36FCE1708E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D862CB99-1CBB-4BE8-BA23-36FCE1708E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
