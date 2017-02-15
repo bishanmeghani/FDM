@@ -17,9 +17,7 @@ namespace SignOffProject2WebUI.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            BookCartViewModels viewModel;
-            viewModel = CreateBookCartViewModel();
-            return View("BookCart", viewModel);
+            return View("BookCart", modelDb.books.ToList());
         }
 
         [HttpPost]
@@ -29,24 +27,6 @@ namespace SignOffProject2WebUI.Controllers
             bookLogic = new BookLogic();
             bookLogic.AddToCart(bookAdded);
             return RedirectToAction("Index", "Home");
-        }
-
-        //Create view model for one group
-        public BookCartViewModels CreateBookCartViewModel()
-        {
-            BookCartViewModels model = new BookCartViewModels();
-            var groupList = _userAccountLogic.ViewAllGroupsFollowedByUser(user).Where(u => u.groupID == id);
-
-            List<GroupViewModels> groups = new List<GroupViewModels>();
-
-            foreach (Group g in groupList)
-            {
-                groups.Add(new GroupViewModels() { group = g });
-            }
-
-            var group = groups.First();
-
-            return group;
         }
     }
 }
