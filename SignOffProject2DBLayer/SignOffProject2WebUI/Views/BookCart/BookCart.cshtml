@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SignOffProject2WebUI.Models.BookCartViewModels>
+﻿@model IEnumerable<SignOffProject2DBLayer.Book>
 @{
     ViewBag.Title = "BookCart";
 }
@@ -7,8 +7,8 @@
 
 <table class="table">
     <tr>
-        <th>@Html.DisplayNameFor(model => model.title)</th>
-        <th>@Html.DisplayNameFor(model => model.price)</th>
+        <th>@Html.DisplayNameFor(book => book.title)</th>
+        <th>@Html.DisplayNameFor(book => book.price)</th>
     </tr>
 
     @foreach (var book in Model)

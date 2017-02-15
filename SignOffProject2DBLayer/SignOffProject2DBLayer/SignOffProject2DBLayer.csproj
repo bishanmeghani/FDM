@@ -62,9 +62,9 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="Cart.cs" />
-    <Compile Include="Migrations\201702151014427_initial.cs" />
-    <Compile Include="Migrations\201702151014427_initial.Designer.cs">
-      <DependentUpon>201702151014427_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201702151543343_third.cs" />
+    <Compile Include="Migrations\201702151543343_third.Designer.cs">
+      <DependentUpon>201702151543343_third.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -77,8 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702151014427_initial.resx">
-      <DependentUpon>201702151014427_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702151543343_third.resx">
+      <DependentUpon>201702151543343_third.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,5 +12,6 @@ namespace SignOffProject2DBLayer
         [Key]
         public int cartId { get; set; }
 
+        public List<Book> cartItems { get; set; }
     }
 }
