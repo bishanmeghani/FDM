@@ -10,9 +10,7 @@ namespace SignOffProjectDatabaseLayer
 {
     public class ContextClass : DbContext
     {
-        [Key]
         public DbSet<Book> books { get; set; }
-
         public DbSet<Cart> carts { get; set; }
 
     }
