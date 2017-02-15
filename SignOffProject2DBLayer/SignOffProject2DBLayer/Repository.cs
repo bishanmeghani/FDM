@@ -17,13 +17,27 @@ namespace SignOffProject2DBLayer
 
         public virtual void AddBook(Book bookToAdd)
         {
-            context.books.Add(bookToAdd);
-            context.SaveChanges();
+            try
+            {
+                context.books.Add(bookToAdd);
+                context.SaveChanges();
+            }
+            catch(Exception)
+            {
+                throw;
+            }
         }
 
         public virtual List<Book> GetAllBooks()
         {
-            return context.books.ToList();
+            try
+            {
+                return context.books.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

@@ -75,31 +75,18 @@ namespace SignOffProject2Tests
         [TestMethod]
         public void Test_AddToCartInLogic_AddsBookToCart()
         {
-            //Arrange
-            List<Book> expected = new List<Book>();
-            expected.Add(mockBook.Object);
+            //Arrange        
             
-            var testData = new List<Book>()
-            {
-               mockBook.Object,
-            }.AsQueryable();
-
-            dbSetMock.As<IQueryable<Book>>().Setup(d => d.Provider).Returns(testData.Provider);
-            dbSetMock.As<IQueryable<Book>>().Setup(d => d.Expression).Returns(testData.Expression);
-            dbSetMock.As<IQueryable<Book>>().Setup(d => d.ElementType).Returns(testData.ElementType);
-            dbSetMock.As<IQueryable<Book>>().Setup(d => d.GetEnumerator()).Returns(testData.GetEnumerator());
-
             contextMock.Setup(b => b.books).Returns(dbSetMock.Object);
-            Mock<Repository> mockRepo = new Mock<Repository>();
-            BookLogic classUnderTest = new BookLogic();
+            Mock<Repository> mockRepo = new Mock<Repository>(contextMock.Object);
+            BookLogic classUnderTest = new BookLogic(contextMock.Object);
             mockRepo.Setup(b => b.AddBook(mockBook.Object)).Verifiable();
-
+            
             //Act
             classUnderTest.AddToCart(mockBook.Object);
 
             //Assert
-            mockRepo.Verify(b => b.AddBook(mockBook.Object));
+            mockRepo.Verify(b => b.AddBook(mockBook.Object), Times.Once);
         }
-
     }
 }
