@@ -15,6 +15,11 @@ namespace SignOffProject2DBLayer
             context = _context;
         }
 
+        public List<Book> GetAllBooks()
+        {
+            return context.books.ToList();
+        }
+
         public void AddBook(Book bookToAdd)
         {
             context.books.Add(bookToAdd);
