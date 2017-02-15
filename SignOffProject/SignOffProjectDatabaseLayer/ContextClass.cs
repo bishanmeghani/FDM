@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SignOffProjectDatabaseLayer
 {
-    public class ContextClass
+    public class ContextClass : DbContext
     {
-        DbSet<Book> books { get; set; }
-        DbSet<Cart> carts { get; set; }
+        public DbSet<Book> books { get; set; }
+        public DbSet<Cart> carts { get; set; }
 
     }
 }
