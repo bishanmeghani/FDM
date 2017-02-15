@@ -17,7 +17,7 @@ namespace SignOffProject2DBLayer
         {
         }
 
-        public DbSet<Book> books { get; set; }
-        public DbSet<Cart> carts { get; set; }
+        public virtual DbSet<Book> books { get; set; }
+        public virtual DbSet<Cart> carts { get; set; }
     }
 }
