@@ -22,9 +22,9 @@ namespace SignOffProject2DBLayer
                 context.books.Add(bookToAdd);
                 context.SaveChanges();
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw;
+                throw e;
             }
         }
 
@@ -34,9 +34,9 @@ namespace SignOffProject2DBLayer
             {
                 return context.books.ToList();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw e;
             }
         }
     }
