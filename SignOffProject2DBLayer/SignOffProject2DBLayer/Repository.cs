@@ -15,15 +15,15 @@ namespace SignOffProject2DBLayer
             context = _context;
         }
 
-        public virtual List<Book> GetAllBooks()
-        {
-            return context.books.ToList();
-        }
-
         public virtual void AddBook(Book bookToAdd)
         {
             context.books.Add(bookToAdd);
             context.SaveChanges();
+        }
+
+        public virtual List<Book> GetAllBooks()
+        {
+            return context.books.ToList();
         }
     }
 }
