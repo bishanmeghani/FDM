@@ -13,8 +13,14 @@ namespace SignOffProject2WebUI.Controllers
         SignOffDBModel modelDb = new SignOffDBModel();
         BookLogic bookLogic;
 
-        // GET: BookCart
+        [HttpGet]
         public ActionResult Index()
+        {
+            return View("BookCart");
+        }
+
+        [HttpPost]
+        public ActionResult AddToCart()
         {
             Book bookAdded = new Book();
             bookLogic = new BookLogic();
