@@ -31,10 +31,10 @@ namespace SignOffProject2Logic
             {
                 repository.AddBook(book);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 
-                throw;
+                throw e;
             }
         }
 
@@ -44,10 +44,10 @@ namespace SignOffProject2Logic
             {
                 return books;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 
-                throw;
+                throw e;
             }
         }
     }
