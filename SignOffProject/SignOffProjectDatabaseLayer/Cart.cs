@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace SignOffProjectDatabaseLayer
 {
-    public class Book
+    public class Cart
     {
-        public int bookId { get; set; }
-        public string name { get; set; }
-        public double price { get; set; }
+        public int cartId { get; set; }
     }
 }
