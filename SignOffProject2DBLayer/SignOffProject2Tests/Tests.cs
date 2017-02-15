@@ -5,6 +5,7 @@ using Moq;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using SignOffProject2Logic;
 
 namespace SignOffProject2Tests
 {
@@ -22,6 +23,8 @@ namespace SignOffProject2Tests
             dbSetMock = new Mock<DbSet<Book>>();
             contextMock = new Mock<SignOffDBModel>();
         }
+
+        //Repository Tests
 
         [TestMethod]
         public void Test_AddBookInRepository_AddsABook()
@@ -68,5 +71,35 @@ namespace SignOffProject2Tests
             //Assert
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Test_AddToCartInLogic_AddsBookToCart()
+        {
+            //Arrange
+            List<Book> expected = new List<Book>();
+            expected.Add(mockBook.Object);
+            
+            var testData = new List<Book>()
+            {
+               mockBook.Object,
+            }.AsQueryable();
+
+            dbSetMock.As<IQueryable<Book>>().Setup(d => d.Provider).Returns(testData.Provider);
+            dbSetMock.As<IQueryable<Book>>().Setup(d => d.Expression).Returns(testData.Expression);
+            dbSetMock.As<IQueryable<Book>>().Setup(d => d.ElementType).Returns(testData.ElementType);
+            dbSetMock.As<IQueryable<Book>>().Setup(d => d.GetEnumerator()).Returns(testData.GetEnumerator());
+
+            contextMock.Setup(b => b.books).Returns(dbSetMock.Object);
+            Mock<Repository> mockRepo = new Mock<Repository>();
+            BookLogic classUnderTest = new BookLogic();
+            mockRepo.Setup(b => b.AddBook(mockBook.Object)).Verifiable();
+
+            //Act
+            classUnderTest.AddToCart(mockBook.Object);
+
+            //Assert
+            mockRepo.Verify(b => b.AddBook(mockBook.Object));
+        }
+
     }
 }
