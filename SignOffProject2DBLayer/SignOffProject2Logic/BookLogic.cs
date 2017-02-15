@@ -16,10 +16,11 @@ namespace SignOffProject2Logic
     {
         
         List<Book> books;
+        Repository repository;
 
         public void AddToCart(Book book)
         {
-            books.Add(book);
+            repository.AddBook(book);
         }
 
         public List<Book> ViewAllBooks()
