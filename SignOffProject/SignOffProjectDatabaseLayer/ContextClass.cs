@@ -10,6 +10,16 @@ namespace SignOffProjectDatabaseLayer
 {
     public class ContextClass : DbContext
     {
+        public ContextClass()
+            : base("name=SignOffDatabase")
+        {
+        }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+        }
+
         public DbSet<Book> books { get; set; }
         public DbSet<Cart> carts { get; set; }
 
