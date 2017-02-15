@@ -21,5 +21,10 @@ namespace SignOffProject2Logic
         {
             books.Add(book);
         }
+
+        public List<Book> ViewAllBooks()
+        {
+            return books;
+        }
     }
 }
