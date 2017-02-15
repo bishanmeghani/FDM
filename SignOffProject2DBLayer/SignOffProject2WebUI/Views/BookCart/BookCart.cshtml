@@ -8,13 +8,13 @@
 
 <table class="table">
     <tr>
-        <th>@Html.ActionLink("Book", "Index")</th>
+        <th>@Html.ActionLink("Book title", "Index")</th>
     </tr>
 
-    @foreach (var course in Model)
+    @foreach (var book in Model)
     {
         <tr>
-            <td>@Html.DisplayFor(model => course.courseName)</td>
+            <td>@Html.DisplayFor(model => book.title)</td>
         </tr>
     }
 </table>
