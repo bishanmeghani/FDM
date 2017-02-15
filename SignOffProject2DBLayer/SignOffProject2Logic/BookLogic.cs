@@ -14,6 +14,7 @@ namespace SignOffProject2Logic
 
     public class BookLogic : IBookLogic
     {
+        
         List<Book> books;
 
         public void AddToCart(Book book)

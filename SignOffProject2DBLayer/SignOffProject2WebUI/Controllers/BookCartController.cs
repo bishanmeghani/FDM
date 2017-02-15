@@ -16,9 +16,9 @@ namespace SignOffProject2WebUI.Controllers
         // GET: BookCart
         public ActionResult Index()
         {
-            //Book bookAdded = modelDb.books.Where(b => b.title).ToList[0];
+            Book bookAdded = new Book();
             bookLogic = new BookLogic();
-            //bookLogic.AddToCart(bookAdded);
+            bookLogic.AddToCart(bookAdded);
             return RedirectToAction("Index", "Home");
         }
     }
