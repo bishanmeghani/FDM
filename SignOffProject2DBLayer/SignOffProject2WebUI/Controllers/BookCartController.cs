@@ -1,5 +1,6 @@
 ﻿using SignOffProject2DBLayer;
 using SignOffProject2Logic;
+using SignOffProject2WebUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace SignOffProject2WebUI.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View("BookCart");
+            BookCartViewModels viewModel;
+            viewModel = CreateBookCartViewModel();
+            return View("BookCart", viewModel);
         }
 
         [HttpPost]
@@ -26,6 +29,24 @@ namespace SignOffProject2WebUI.Controllers
             bookLogic = new BookLogic();
             bookLogic.AddToCart(bookAdded);
             return RedirectToAction("Index", "Home");
+        }
+
+        //Create view model for one group
+        public BookCartViewModels CreateBookCartViewModel()
+        {
+            BookCartViewModels model = new BookCartViewModels();
+            var groupList = _userAccountLogic.ViewAllGroupsFollowedByUser(user).Where(u => u.groupID == id);
+
+            List<GroupViewModels> groups = new List<GroupViewModels>();
+
+            foreach (Group g in groupList)
+            {
+                groups.Add(new GroupViewModels() { group = g });
+            }
+
+            var group = groups.First();
+
+            return group;
         }
     }
 }
