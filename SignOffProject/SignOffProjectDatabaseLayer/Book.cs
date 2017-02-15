@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SignOffProjectDatabaseLayer
 {
-    public class Class1
+    public class Book
     {
     }
 }
