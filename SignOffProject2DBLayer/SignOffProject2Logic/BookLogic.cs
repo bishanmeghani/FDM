@@ -17,15 +17,38 @@ namespace SignOffProject2Logic
         
         List<Book> books;
         Repository repository;
+        SignOffDBModel context;
 
-        public void AddToCart(Book book)
+        public BookLogic(SignOffDBModel _context)
         {
-            repository.AddBook(book);
+            context = _context;
+            repository = new Repository(_context);
         }
 
-        public List<Book> ViewAllBooks()
+        public virtual void AddToCart(Book book)
         {
-            return books;
+            try
+            {
+                repository.AddBook(book);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        public virtual List<Book> ViewAllBooks()
+        {
+            try
+            {
+                return books;
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
         }
     }
 }

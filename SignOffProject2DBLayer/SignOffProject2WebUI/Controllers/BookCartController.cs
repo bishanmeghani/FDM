@@ -24,7 +24,7 @@ namespace SignOffProject2WebUI.Controllers
         public ActionResult AddToCart()
         {
             Book bookAdded = new Book();
-            bookLogic = new BookLogic();
+            bookLogic = new BookLogic(modelDb);
             bookLogic.AddToCart(bookAdded);
             return RedirectToAction("Index", "Home");
         }
