@@ -245,6 +245,10 @@
       <Project>{49c73755-d192-4568-9c34-76af2d82d7e4}</Project>
       <Name>SignOffProject2DBLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SignOffProject2Logic\SignOffProject2Logic.csproj">
+      <Project>{d862cb99-1cbb-4be8-ba23-36fce1708e8a}</Project>
+      <Name>SignOffProject2Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
