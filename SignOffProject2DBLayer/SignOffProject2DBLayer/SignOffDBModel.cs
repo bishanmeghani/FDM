@@ -16,5 +16,8 @@ namespace SignOffProject2DBLayer
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
+
+        public DbSet<Book> books { get; set; }
+        public DbSet<Cart> carts { get; set; }
     }
 }
