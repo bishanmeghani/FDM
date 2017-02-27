@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Project
 {
-    public class Class1
+    public class Cart
     {
+        public int id { get; set; }
+        
+        public List<Book> books { get; set; }
     }
 }
