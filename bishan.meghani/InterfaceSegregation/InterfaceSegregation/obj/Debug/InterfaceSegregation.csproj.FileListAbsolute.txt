@@ -1,0 +1,5 @@
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\InterfaceSegregation\InterfaceSegregation\bin\Debug\InterfaceSegregation.exe.config
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\InterfaceSegregation\InterfaceSegregation\bin\Debug\InterfaceSegregation.exe
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\InterfaceSegregation\InterfaceSegregation\bin\Debug\InterfaceSegregation.pdb
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\InterfaceSegregation\InterfaceSegregation\obj\Debug\InterfaceSegregation.exe
+\\filbtn002\trainees\bishan.meghani\visual studio 2013\Projects\InterfaceSegregation\InterfaceSegregation\obj\Debug\InterfaceSegregation.pdb
