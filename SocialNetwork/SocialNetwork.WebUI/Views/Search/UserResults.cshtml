@@ -1,0 +1,14 @@
+﻿@model ICollection<SocialNetwork.WebUI.Models.UserViewModel>
+@{
+    ViewBag.Title = "UserResults";
+}
+
+<h2>User Results</h2>
+
+<div class="User">
+    @foreach (SocialNetwork.WebUI.Models.UserViewModel viewModel in Model)
+    {
+        @Html.Partial("_User", viewModel)
+    }
+</div>
+

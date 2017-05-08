@@ -1,0 +1,143 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 600px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-bottom: 600px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.nav-title
+{
+    color: #ffffff;
+    font-family: 'VT323', monospace; 
+    font-size: 33px; 
+    padding-right: 40px;
+}
+
+.make-post-form
+{
+    padding: 1em;
+    display: block;
+}
+
+.comment-container
+{
+    border-radius: 2px;
+    background-color: #e6f8fe;
+    margin: 0.5em;
+    display: table;
+    width: 100%;
+}
+
+.comment-content
+{
+    display: table-cell;
+}
+
+.comment-sidebar
+{
+    display: table-cell;
+    max-width: 100px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.comment-profile-image
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-profile-image
+{
+    border: 1px solid black;
+    border-radius: 2px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-container
+{
+    margin: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: table;
+    width: 100%;
+
+    background-color: white;
+    border-bottom: 1px ridge #035976;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.post-sidebar
+{
+    max-width: 150px;
+    display: table-cell;
+    margin-right: 1em;
+    padding: 1em;
+}
+.post-content
+{
+    display: table-cell;
+    margin-left: 1em;
+}
+
+.post-code
+{
+    
+}
+
+.post-code pre
+{
+    margin: 0.5em;
+    margin-bottom: 1em;
+
+    border: 1px solid #035976;
+    color: #035976;
+    background-color: whitesmoke;
+}
+
+.post-hr
+{
+    border: 1px #035976 solid;
+}
+
+
+.pink 
+{
+    border: 1px solid pink;
+}
+
+.green
+{
+    border: 1px solid green;
+}
+
+.red
+{
+    border: 1px solid red;
+}
+
+.blue
+{
+    border: 1px solid blue;
+}
