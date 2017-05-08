@@ -1,0 +1,13 @@
+﻿@model IEnumerable<SocialNetwork.WebUI.Models.GroupViewModels>
+@{
+    ViewBag.Title = "Your Groups";
+}
+
+<h2 class="text-center">Your Groups</h2>
+<div class="container">
+    @foreach (SocialNetwork.WebUI.Models.GroupViewModels group in Model)
+    {
+        @Html.Partial("_GroupPreview", group);
+    }
+</div>
+
