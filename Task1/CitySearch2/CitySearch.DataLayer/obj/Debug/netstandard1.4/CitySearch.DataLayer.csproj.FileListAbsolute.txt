@@ -1,0 +1,14 @@
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.DataLayer\bin\Debug\netstandard1.4\CitySearch.DataLayer.deps.json
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.DataLayer\bin\Debug\netstandard1.4\CitySearch.DataLayer.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.DataLayer\bin\Debug\netstandard1.4\CitySearch.DataLayer.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.csprojResolveAssemblyReference.cache
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.AssemblyInfo.cs
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.pdb
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.DataLayer\bin\Debug\netstandard1.4\CitySearch.DataLayer.deps.json
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.DataLayer\bin\Debug\netstandard1.4\CitySearch.DataLayer.dll
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.DataLayer\bin\Debug\netstandard1.4\CitySearch.DataLayer.pdb
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.AssemblyInfo.cs
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.dll
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.DataLayer\obj\Debug\netstandard1.4\CitySearch.DataLayer.pdb
