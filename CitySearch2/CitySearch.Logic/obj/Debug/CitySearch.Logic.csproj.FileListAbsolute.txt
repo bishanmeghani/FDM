@@ -1,0 +1,14 @@
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.Logic.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.Logic.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.csprojResolveAssemblyReference.cache
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.pdb
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.dll
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.pdb
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.Logic\bin\Debug\CitySearch.Logic.dll
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.Logic\bin\Debug\CitySearch.Logic.pdb
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.dll
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.pdb
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.Logic\obj\Debug\CitySearch.Logic.csprojResolveAssemblyReference.cache
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.Logic\obj\Debug\CitySearch.Logic.dll
+C:\Users\enxbm\Documents\Visual Studio 2017\Projects\CitySearch2\CitySearch.Logic\obj\Debug\CitySearch.Logic.pdb
