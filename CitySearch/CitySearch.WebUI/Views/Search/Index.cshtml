@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CitySearch.DataLayer.Repository>
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+@*<input type="text" name="search" placeholder="Search..">
+@Html.ActionLink("Search", "SearchCity", "Search")*@
+
+@*@using (Html.BeginForm())
+{
+    <p>
+        @Html.TextBox("searchString") <br />
+        <input type="submit" value="Search" />
+    </p>
+}*@ 
+
+
+
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelItem => item.)
+}
