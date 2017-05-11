@@ -1,0 +1,4 @@
+c:\users\enxbm\documents\visual studio 2017\Projects\Football\Football.DataLayer\bin\Debug\Football.DataLayer.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\Football\Football.DataLayer\bin\Debug\Football.DataLayer.pdb
+c:\users\enxbm\documents\visual studio 2017\Projects\Football\Football.DataLayer\obj\Debug\Football.DataLayer.dll
+c:\users\enxbm\documents\visual studio 2017\Projects\Football\Football.DataLayer\obj\Debug\Football.DataLayer.pdb

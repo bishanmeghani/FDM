@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Football.WebUI", "Football.WebUI\Football.WebUI.csproj", "{110771F5-B179-48AF-A123-D9F40972FCFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Football.DataLayer", "Football.DataLayer\Football.DataLayer.csproj", "{6848728C-4F6A-433C-8384-F67626799400}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{110771F5-B179-48AF-A123-D9F40972FCFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110771F5-B179-48AF-A123-D9F40972FCFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110771F5-B179-48AF-A123-D9F40972FCFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110771F5-B179-48AF-A123-D9F40972FCFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6848728C-4F6A-433C-8384-F67626799400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6848728C-4F6A-433C-8384-F67626799400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6848728C-4F6A-433C-8384-F67626799400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6848728C-4F6A-433C-8384-F67626799400}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
