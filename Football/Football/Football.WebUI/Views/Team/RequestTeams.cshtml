@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "RequestTeams";
+}
+
+<h2>RequestTeams</h2>
+
+@Html.ActionLink("Show me the teams", "ShowTeams", "Team")
+
+<br>
+<br>
+
+@using (Html.BeginForm("ShowTeams", "Team"))
+{
+    <input type = "submit" value = "Show me the teams"/>   
+}
