@@ -1,0 +1,17 @@
+﻿@model CitySearch.Logic.ICityResult
+@{
+    ViewBag.Title = "SearchCity";
+}
+
+<h2>SearchCity</h2>
+
+@foreach (var item in Model.NextCities)
+{
+    @Html.DisplayFor(modelItem => item)
+    <br>
+}
+@foreach (var item in Model.NextLetters)
+{
+    @Html.DisplayFor(modelItem => item)
+    <br>
+}
