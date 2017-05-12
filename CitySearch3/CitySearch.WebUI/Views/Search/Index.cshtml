@@ -1,0 +1,27 @@
+﻿@model CitySearch.Logic.ICityResult
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+
+@using (Ajax.BeginForm("Index", "Search", new AjaxOptions()
+{
+    HttpMethod = "POST",
+    UpdateTargetId = "searchForm",
+    InsertionMode = InsertionMode.InsertAfter
+}, new { @id = "searchCity" }))
+{
+    <div class="form-group">
+        @Html.TextBox("searchString")
+
+        <input type="submit" name="SaveButton" value="Save" />
+        
+    </div>
+}
+
+
+ 
+
+

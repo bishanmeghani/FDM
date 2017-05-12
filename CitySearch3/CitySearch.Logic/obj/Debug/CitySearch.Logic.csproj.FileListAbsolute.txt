@@ -1,0 +1,14 @@
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.Logic.dll
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.Logic.pdb
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.csprojResolveAssemblyReference.cache
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.dll
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.pdb
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.dll
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.pdb
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.csprojResolveAssemblyReference.cache
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.dll
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch.Logic\obj\Debug\CitySearch.Logic.pdb
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.Logic.dll
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.Logic.pdb
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.dll
+C:\Users\bishan.meghani\Desktop\CitySearch\CitySearch.Logic\bin\Debug\CitySearch.DataLayer.pdb
